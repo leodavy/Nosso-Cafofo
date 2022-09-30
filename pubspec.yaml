@@ -1,0 +1,51 @@
+name: nosso
+description: A new Flutter project.
+publish_to: none
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.18.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  widgetbook: 2.0.5-beta
+  auto_size_text: 3.0.0
+  flutter_svg: ^1.0.3
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+  flutter_lints: ^2.0.0
+flutter: 
+  uses-material-design: true
+  assets: 
+    - packages/nosso/assets/images/ellipse.png
+    - packages/nosso/assets/images/facebook1.png
+    - packages/nosso/assets/images/ellipsetwitter.png
+    - packages/nosso/assets/images/twittericon1.png
+    - packages/nosso/assets/images/ellipsegoogle.png
+    - packages/nosso/assets/images/iconegoogle.png
+    - packages/nosso/assets/images/caixaemail.svg
+    - packages/nosso/assets/images/linhaesquerda.svg
+    - packages/nosso/assets/images/linhadireita.svg
+    - packages/nosso/assets/images/amigos.png
+    - packages/nosso/assets/images/telhadocasabranco1.png
+    - packages/nosso/assets/images/bateria1.png
+    - packages/nosso/assets/images/wifi1.png
+    - packages/nosso/assets/images/rede1.png
+    - packages/nosso/assets/images/bordainvertida.png
+    - packages/nosso/assets/images/caixasenha2.svg
+    - packages/nosso/assets/images/caixasenha.svg
+    - packages/nosso/assets/images/setavoltarcriarconta.svg
+    - packages/nosso/assets/images/borda1.png
+    - packages/nosso/assets/images/cafofo.png
+    - packages/nosso/assets/images/fotoperfil.png
+    - packages/nosso/assets/images/notificacao1.png
+    - packages/nosso/assets/images/caixanome.svg
+    - packages/nosso/assets/images/ellipse2.png
+    - packages/nosso/assets/images/logintwitter.png
+    - packages/nosso/assets/images/loginfacebook.png
+    - packages/nosso/assets/images/logingoogle.png
+    - packages/nosso/assets/images/linhaemail.svg
+    - packages/nosso/assets/images/linhasenha.svg
+    - packages/nosso/assets/images/linhasenhadnv.svg
+    - packages/nosso/assets/images/linhanome.svg
