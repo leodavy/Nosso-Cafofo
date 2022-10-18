@@ -8,7 +8,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
       "/": (context) => Splash(),
-      '/login':(context) => Login(),
+      '/login':(context) => Login(), 
       //'/Register':(context) => Register()
     },
   ));
