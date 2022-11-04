@@ -4,13 +4,30 @@
             "outputFile": "/Users/leo/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/leo/.gradle/caches/transforms-3/315c0a756702935593fffab8f030bd95/transformed/browser-1.4.0/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,255,454,665",
+                        "endColumns": "199,198,210,201",
+                        "endOffsets": "250,449,660,862"
+                    }
+                },
+                {
+                    "source": "/Users/leo/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
                         "endColumns": "203",
                         "endOffsets": "254"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "867",
+                        "endColumns": "203",
+                        "endOffsets": "1066"
                     }
                 }
             ]

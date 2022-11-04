@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:nosso_cafofo/login.dart';
-import 'package:nosso_cafofo/splash.dart';
+import 'package:nosso_cafofo/screens/login.dart';
+import 'package:nosso_cafofo/screens/splash.dart';
 
 void main() {
   runApp(MaterialApp(
