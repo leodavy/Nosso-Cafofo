@@ -1,4 +1,4 @@
-#Thu Nov 03 23:25:16 BRT 2022
+#Sun Nov 06 23:04:03 BRT 2022
 base.1=/Users/leo/Documents/Nosso-Cafofo/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
 path.1=classes2.dex
 base.0=/Users/leo/Documents/Nosso-Cafofo/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex

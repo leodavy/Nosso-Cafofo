@@ -35,21 +35,30 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+
+  #Google Sign In
   firebase_core: ^2.1.1
   firebase_auth: ^4.0.1
   google_sign_in: ^5.4.2
+
+  #Google Icon
+  font_awesome_flutter: ^10.2.1
+
+  
+
+
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   
+  #Launcher Icon
   flutter_launcher_icons: "^0.10.0"
 
 flutter_icons:
   android: "launcher_icon"
-  ios: true
+  ios: false
   image_path: "assets/images/Launcher/LauncherIcon.png" # ADD a Launcher Icon image
   min_sdk_android: 21 # android min sdk min:16, default 21
   
@@ -71,7 +80,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/images/SplashScreen/SplashScreenIcon.png  
+    - assets/images 
   #add Splash screen Image
   
 
