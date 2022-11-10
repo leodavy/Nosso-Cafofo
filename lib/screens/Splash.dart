@@ -19,7 +19,7 @@ class _SplashState extends State<Splash> {
   }
 
   startTimer(){
-    var duration = Duration(seconds: 2);
+    var duration = Duration(seconds: 1);
     return Timer(duration, route);
   }
 

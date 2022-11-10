@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'Register.dart';
+
+
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -57,26 +60,29 @@ class Login extends StatelessWidget {
                   ),
                     Container(
                       height: 40,
-                      alignment: Alignment.centerRight,
+                      alignment: Alignment.center,
                       child: 
                       TextButton(
                         style: TextButton.styleFrom(
                           textStyle: const TextStyle(fontSize: 20,
-                          backgroundColor: Colors.black
-                          ),
-                         
-                        ),
-                        onPressed: () {  },
+                                                              
+                          )
+                        ), // Style form
+                        
+                        onPressed: () {
+                          
+                            Navigator.pushNamed(context, "/ForgotPassword");
+                            
+                         },
                         child: Text(
                           "Esqueceu a senha?",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
-                            decorationThickness: 2.85,
-                            
+                            fontSize: 15,
+                            color: Colors.black
                           ),
                         )
-                      )
-                       
+                      )         
                     )
                  ]
                  ),
