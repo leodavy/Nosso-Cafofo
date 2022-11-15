@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/leo/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/ldyv/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/a3c068ac31bd174a63625bee78c2ef24/transformed/jetified-play-services-auth-20.0.1/res/values-watch-v20/values.xml",
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/a3c068ac31bd174a63625bee78c2ef24/transformed/jetified-play-services-auth-20.0.1/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

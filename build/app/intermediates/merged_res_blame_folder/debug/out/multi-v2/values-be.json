@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/leo/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "/home/ldyv/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
             "map": [
                 {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/c159910a54512495a0b740f3d99120bf/transformed/jetified-play-services-basement-18.1.0/res/values-be/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "141",
-                        "endOffsets": "336"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1059",
-                        "endColumns": "145",
-                        "endOffsets": "1200"
-                    }
-                },
-                {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/315c0a756702935593fffab8f030bd95/transformed/browser-1.4.0/res/values-be/values-be.xml",
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/315c0a756702935593fffab8f030bd95/transformed/browser-1.4.0/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/res/values-be/values-be.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "24",
-                        "startColumns": "4",
-                        "startOffsets": "2723",
-                        "endColumns": "100",
-                        "endOffsets": "2819"
-                    }
-                },
-                {
-                    "source": "/Users/leo/.gradle/caches/transforms-3/20d656a772dcc4d43634989c73f33942/transformed/jetified-play-services-base-18.0.1/res/values-be/values.xml",
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/20d656a772dcc4d43634989c73f33942/transformed/jetified-play-services-base-18.0.1/res/values-be/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +35,40 @@
                         "startOffsets": "55,162,324,449,559,714,840,955,1205,1367,1474,1637,1765,1918,2077,2146,2208",
                         "endColumns": "106,161,124,109,154,125,114,103,161,106,162,127,152,158,68,61,78",
                         "endOffsets": "157,319,444,554,709,835,950,1054,1362,1469,1632,1760,1913,2072,2141,2203,2282"
+                    }
+                },
+                {
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/c159910a54512495a0b740f3d99120bf/transformed/jetified-play-services-basement-18.1.0/res/values-be/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1059",
+                        "endColumns": "145",
+                        "endOffsets": "1200"
+                    }
+                },
+                {
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/res/values-be/values-be.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "24",
+                        "startColumns": "4",
+                        "startOffsets": "2723",
+                        "endColumns": "100",
+                        "endOffsets": "2819"
                     }
                 }
             ]
