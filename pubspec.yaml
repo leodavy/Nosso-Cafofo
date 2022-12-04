@@ -80,9 +80,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/images/
     - assets/images/SplashScreen/SplashScreenIcon.png 
     - assets/images/Login/Icone.png
-    - assets/images/
   #add Splash screen Image
   
 
