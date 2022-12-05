@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 application
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:3:4-33:19
-MERGED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:3:4-33:19
+MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.2.0] /home/ldyv/.gradle/caches/transforms-3/dfc62d49f441f2628e9e92ffcc9f6c83/transformed/jetified-firebase-common-ktx-20.2.0/AndroidManifest.xml:10:5-18:19
@@ -54,16 +54,16 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-MERGED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-MERGED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:google_sign_in_android] /home/ldyv/Documents/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/8223e6bce5e468a560e5c646217ec162/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.2.0] /home/ldyv/.gradle/caches/transforms-3/dfc62d49f441f2628e9e92ffcc9f6c83/transformed/jetified-firebase-common-ktx-20.2.0/AndroidManifest.xml:2:1-20:12
@@ -113,33 +113,33 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/ldyv/.gradle/ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ldyv/.gradle/caches/transforms-3/8dfb156dfa0e91524becebd9fa43d60f/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/1052114ff47f310910f579b10c3e74ac/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/38aababeca1254033b4088d56879c2c7/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 	package
-		ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:2:5-39
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+		ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:2:5-39
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-sdk
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-MERGED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] /home/ldyv/Documents/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] /home/ldyv/Documents/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/8223e6bce5e468a560e5c646217ec162/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/8223e6bce5e468a560e5c646217ec162/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:5:5-44
@@ -238,18 +238,18 @@ MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/
 MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/1052114ff47f310910f579b10c3e74ac/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/38aababeca1254033b4088d56879c2c7/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/38aababeca1254033b4088d56879c2c7/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
-INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:5-66
-MERGED from [:google_sign_in_android] /home/ldyv/Documents/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [:google_sign_in_android] /home/ldyv/Documents/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:5-66
+MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/ldyv/.gradle/caches/transforms-3/927f5e9571090bf64f5e7b57cc185774/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/ldyv/.gradle/caches/transforms-3/927f5e9571090bf64f5e7b57cc185774/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/ded95885d7a65ddee0bbc5df92506e22/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:22:5-67
@@ -263,11 +263,11 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] /home
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/60738aacfad0844e6f901df42390bb19/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/60738aacfad0844e6f901df42390bb19/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:22-64
+		ADDED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+ADDED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.2.0] /home/ldyv/.gradle/caches/transforms-3/dfc62d49f441f2628e9e92ffcc9f6c83/transformed/jetified-firebase-common-ktx-20.2.0/AndroidManifest.xml:11:9-17:19
@@ -287,19 +287,19 @@ MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/cach
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/5ae7ac3f1bd8c989b3ecc69f9cc5363e/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+		ADDED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
 ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:11:13-13:85
 	android:value

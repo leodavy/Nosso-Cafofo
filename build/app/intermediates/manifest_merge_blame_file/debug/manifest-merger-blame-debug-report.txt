@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/home/ldyv/Documents/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->/home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->[com.google.firebase:firebase-auth:21.1.0] /home/ldyv/.gradle/caches/transforms-3/927f5e9571090bf64f5e7b57cc185774/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:24:5-79
 16-->[com.google.firebase:firebase-auth:21.1.0] /home/ldyv/.gradle/caches/transforms-3/927f5e9571090bf64f5e7b57cc185774/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:24:22-76
@@ -69,25 +69,25 @@
 58            android:value="2" />
 59
 60        <service
-60-->[:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+60-->[:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 61            android:name="com.google.firebase.components.ComponentDiscoveryService"
-61-->[:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+61-->[:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 62            android:directBootAware="true"
 62-->[com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/5ae7ac3f1bd8c989b3ecc69f9cc5363e/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:34:13-43
 63            android:exported="false" >
 63-->[com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:10:13-37
 64            <meta-data
-64-->[:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+64-->[:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 65                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-65-->[:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+65-->[:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 66                android:value="com.google.firebase.components.ComponentRegistrar" />
-66-->[:firebase_auth] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+66-->[:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 67            <meta-data
-67-->[:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+67-->[:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 68                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-68-->[:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+68-->[:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 69                android:value="com.google.firebase.components.ComponentRegistrar" />
-69-->[:firebase_core] /home/ldyv/Documents/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+69-->[:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 70            <meta-data
 70-->[com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/2c10791772b6634b8912f75f8f5e295a/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:11:13-13:85
 71                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
