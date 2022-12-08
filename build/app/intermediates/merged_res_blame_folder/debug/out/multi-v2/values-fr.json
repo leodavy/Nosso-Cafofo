@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ldyv/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/home/ldyv/.gradle/caches/transforms-3/20d656a772dcc4d43634989c73f33942/transformed/jetified-play-services-base-18.0.1/res/values-fr/values.xml",
