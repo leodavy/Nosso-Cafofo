@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ldyv/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml",
+            "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml",
             "map": [
                 {
                     "source": "/home/ldyv/.gradle/caches/transforms-3/315c0a756702935593fffab8f030bd95/transformed/browser-1.4.0/res/values-te/values-te.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ldyv/Documents/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "/home/ldyv/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/res/values-b+sr+Latn/values-b+sr+Latn.xml",
