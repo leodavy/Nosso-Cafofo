@@ -5,6 +5,7 @@ import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
+import 'package:nosso_cafofo/screens/ModifyProfile.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +25,7 @@ class NossoCafofo extends StatelessWidget {
         '/ForgotPassword': (context) => ForgotPassword(),
         '/Register': (context) => Register(),
         '/Profile': (context) => Profile(),
+        "/ModifyProfile": (context) => ModifyProfile(),
       },
     );
   }
