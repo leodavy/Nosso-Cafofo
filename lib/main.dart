@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
@@ -19,7 +20,9 @@ class NossoCafofo extends StatelessWidget {
       routes: {
         "/Splash": (context) => Splash(),
         '/login': (context) => Login(),
-        '/ForgotPassword': (context) => ForgotPassword()
+        '/ForgotPassword': (context) => ForgotPassword(),
+        '/Register': (context) => Register(),
+
       },
     );
   }
