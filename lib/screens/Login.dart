@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import 'Register.dart';
-
+import "Profile.dart";
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -65,11 +65,27 @@ class Login extends StatelessWidget {
                       color: Colors.black,
                       decoration: TextDecoration.underline),
                 ),
+              )),
+
+          Container(
+              height: 60,
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20)),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/Profile");
+                },
+                child: Text(
+                  "Entrar",
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      decoration: TextDecoration.underline),
+                ),
               ))
         ]),
       ),
     );
-
   }
-
-
+}
