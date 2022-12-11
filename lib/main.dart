@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
-import 'package:nosso_cafofo/screens/Profile.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ class NossoCafofo extends StatelessWidget {
         "/Splash": (context) => Splash(),
         '/login': (context) => Login(),
         '/ForgotPassword': (context) => ForgotPassword(),
-        "/Profile": (context) => Profile()
+        '/Register': (context) => Register(),
       },
     );
   }
