@@ -22,6 +22,7 @@ class NossoCafofo extends StatelessWidget {
         '/login': (context) => Login(),
         '/ForgotPassword': (context) => ForgotPassword(),
         '/Register': (context) => Register(),
+
       },
     );
   }
