@@ -1,13 +1,23 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import 'Register.dart';
 import "Profile.dart";
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
+  Widget _errorWidget = SizedBox();
 
   @override
   Widget build(BuildContext context) {
@@ -20,72 +30,83 @@ class Login extends StatelessWidget {
           SizedBox(height: 40), //para separar iconece das lacunas email/senha
           SizedBox(
             height: 30,
-            child: reusableTextField("E-mail", false, TextEditingController()),
+            child: reusableTextField("E-mail", false, _emailTextController),
           ),
           SizedBox(
             height: 20,
           ),
           SizedBox(
             height: 30,
-            child: reusableTextField("Senha", true, TextEditingController()),
+            child: reusableTextField("Senha", true, _passwordTextController),
           ),
-          Container(
-              height: 40,
-              alignment: Alignment.center,
-              child: TextButton(
-                  style: TextButton.styleFrom(
-                      textStyle: const TextStyle(
-                    fontSize: 20,
-                  )), // Style form
+          SizedBox(
+            height: 15,
+          ),
+          _errorWidget,
+          SizedBox(height: 20),
+          signInAndUpButton(context, true, () {
+            FirebaseAuth.instance
+                .signInWithEmailAndPassword(
+                    email: _emailTextController.text,
+                    password: _passwordTextController.text)
+                .then((value) {
+              print("Signed in");
+              Navigator.pushNamed(context, "/Profile");
+            }).onError((error, stackTrace) {
+              print("incorrect Password");
+              _errorWidget = incorrectPassword();
+              setState(() {});
+            });
+          }),
 
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/ForgotPassword");
-                  },
-                  child: Text(
-                    "Esqueceu a senha?",
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: 15,
-                        color: Colors.black),
-                  ))),
-          //SizedBox(height: 5),
-          Container(
-              height: 40,
-              alignment: Alignment.center,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20)),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/Register");
-                },
-                child: Text(
-                  "Registre - se",
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                      decoration: TextDecoration.underline),
-                ),
-              )),
-
-          Container(
-              height: 60,
-              alignment: Alignment.center,
-              child: ElevatedButton(
-                style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20)),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/Profile");
-                },
-                child: Text(
-                  "Entrar",
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                      decoration: TextDecoration.underline),
-                ),
-              ))
+          signUpOption()
         ]),
       ),
+    );
+  }
+
+  Row incorrectPassword() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("E-mail ou senha incorretos, ",
+            style: TextStyle(color: hexStringToColor("#2c3333"))),
+        GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ForgotPassword()));
+            },
+            child: Text(
+              "Esqueceu sua senha?",
+              style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: hexStringToColor("#252B2B"),
+                  fontWeight: FontWeight.bold),
+            ))
+      ],
+    );
+  }
+
+  Row signUpOption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("Não possui uma conta? ",
+            style: TextStyle(color: hexStringToColor("#2c3333"))),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Register()));
+          },
+          child: Text(
+            "Registre-se",
+            style: TextStyle(
+                decoration: TextDecoration.underline,
+                color: hexStringToColor("#252B2B"),
+                fontWeight: FontWeight.bold),
+          ),
+        )
+      ],
     );
   }
 }
