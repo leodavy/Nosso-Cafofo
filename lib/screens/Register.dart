@@ -67,10 +67,8 @@ class _RegisterState extends State<Register> {
               height: 15,
             ),
             signInAndUpButton(context, false, () {
-              if (_confirmPasswordTextController.text ==
-                  _passwordTextController) {
-                _incorrectPassword = SizedBox();
-                setState(() {});
+              if (_confirmPasswordTextController.toString() ==
+                  _passwordTextController.toString()) {
                 FirebaseAuth.instance
                     .createUserWithEmailAndPassword(
                         email: _emailTextController.text,
@@ -82,6 +80,8 @@ class _RegisterState extends State<Register> {
                 }).onError((error, stackTrace) {
                   print("Error ${error.toString()}");
                 });
+                _incorrectPassword = SizedBox();
+                setState(() {});
               } else {
                 _incorrectPassword = incorrectPassword();
                 setState(() {});
