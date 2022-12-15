@@ -1,4 +1,4 @@
-#Sun Dec 11 14:23:22 BRT 2022
+#Thu Dec 15 00:39:15 BRT 2022
 base.1=/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
 path.1=classes2.dex
 base.0=/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex

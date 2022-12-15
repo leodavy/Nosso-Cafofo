@@ -6,6 +6,8 @@ import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
 import 'package:nosso_cafofo/screens/ModifyProfile.dart';
+import 'package:nosso_cafofo/screens/Notifications.dart';
+import 'package:nosso_cafofo/screens/Cafofo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +20,7 @@ class NossoCafofo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/Splash",
+      initialRoute: "/Profile",
       routes: {
         "/Splash": (context) => Splash(),
         '/login': (context) => Login(),
@@ -26,6 +28,8 @@ class NossoCafofo extends StatelessWidget {
         '/Register': (context) => Register(),
         '/Profile': (context) => Profile(),
         "/ModifyProfile": (context) => ModifyProfile(),
+        "/Notifications": (context) => Notifications(),
+        "/Cafofo": ((context) => Cafofo()),
       },
     );
   }

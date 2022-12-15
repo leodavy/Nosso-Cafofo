@@ -4,17 +4,7 @@
             "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/home/ldyv/.gradle/caches/transforms-3/315c0a756702935593fffab8f030bd95/transformed/browser-1.4.0/res/values-pt/values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,170,269,381",
-                        "endColumns": "114,98,111,105",
-                        "endOffsets": "165,264,376,482"
-                    }
-                },
-                {
-                    "source": "/home/ldyv/.gradle/caches/transforms-3/09bb46c673f20fba6b290d815cc9167a/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "487",
                         "endColumns": "100",
                         "endOffsets": "583"
+                    }
+                },
+                {
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/19f7bae01fd307f360a3133a078074a7/transformed/browser-1.4.0/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,170,269,381",
+                        "endColumns": "114,98,111,105",
+                        "endOffsets": "165,264,376,482"
                     }
                 }
             ]
