@@ -20,7 +20,7 @@ class NossoCafofo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/Profile",
+      initialRoute: "/Splash",
       routes: {
         "/Splash": (context) => Splash(),
         '/login': (context) => Login(),
