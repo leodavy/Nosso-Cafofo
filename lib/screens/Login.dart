@@ -69,7 +69,7 @@ class _LoginState extends State<Login> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("E-mail ou senha incorretos, ",
+        Text("Dados incorretos, ",
             style: TextStyle(color: hexStringToColor("#2c3333"))),
         GestureDetector(
             onTap: () {
