@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
@@ -17,6 +19,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+
   Widget _errorWidget = SizedBox();
 
   @override
@@ -58,8 +62,37 @@ class _LoginState extends State<Login> {
               setState(() {});
             });
           }),
-
-          signUpOption()
+          signUpOption(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.05,
+          ),
+          externalSignIn(
+              context,
+              "Entrar com google",
+              "assets/images/Login/googleicon.png",
+              "FFFFFF",
+              "DDDDDD",
+              "#2c3333", () {
+            _googleSignIn.signIn();
+          }),
+          //Logins extras, adicionar se der tempo
+          /*externalSignIn(
+              context,
+              "Entrar com facebook",
+              "assets/images/Login/facebook.png",
+              "#3B5998",
+              "#324D85",
+              "FFFFFF", () {
+            signInWithFacebook();
+          }),
+          externalSignIn(
+              context,
+              "Entrar com Twitter",
+              "assets/images/Login/twittericon.png",
+              "#1DA1F2",
+              "#1686CA",
+              "FFFFFF",
+              () {})*/
         ]),
       ),
     );
@@ -110,3 +143,13 @@ class _LoginState extends State<Login> {
     );
   }
 }
+/*
+Future<UserCredential> signInWithFacebook() async {
+  final LoginResult loginResult = await FacebookAuth.instance
+      .login(permissions: ['email', 'public_profile']);
+
+  final OAuthCredential facebookAuthCredential =
+      FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+  return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+}*/
