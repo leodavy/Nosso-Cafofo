@@ -6,5 +6,4 @@ Projeto de aplicativo para a disciplina de Programação para dispositivos móve
 
 - [Davy Leonardo](https://github.com/leodayv)
 - [Rafael Oliveira](https://github.com/raffa43)
-- [Iury Cauã](https://github.com/IuryC)
 
