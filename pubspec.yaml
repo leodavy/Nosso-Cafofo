@@ -36,10 +36,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
 
-  #Google Sign In
+  #Sign In
   firebase_core: ^2.1.1
   firebase_auth: ^4.0.1
   google_sign_in: ^5.4.2
+  flutter_facebook_auth: 
 
   #Google Icon
   font_awesome_flutter: ^10.2.1
@@ -83,6 +84,9 @@ flutter:
     - assets/images/
     - assets/images/SplashScreen/SplashScreenIcon.png 
     - assets/images/Login/Icone.png
+    - assets/images/Login/googleicon.png
+    - assets/images/Login/facebook.png
+    - assets/images/Login/twittericon.png
   #add Splash screen Image
   
 
