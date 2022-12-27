@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/2d3a7c8dcc9147c8f7402ccfe7ff6d4e/transformed/appcompat-1.1.0/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

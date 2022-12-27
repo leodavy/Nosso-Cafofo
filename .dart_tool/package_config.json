@@ -80,6 +80,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "facebook_auth_desktop",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/facebook_auth_desktop-0.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.3.1",
       "packageUri": "lib/",
@@ -128,8 +134,62 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_facebook_auth",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "flutter_facebook_auth_platform_interface",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth_platform_interface-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_facebook_auth_web",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth_web-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-6.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_linux-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_macos-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_platform_interface-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_windows-1.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -180,6 +240,12 @@
       "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///home/ldyv/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "http_parser",
@@ -326,7 +392,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-15T02:14:13.806059Z",
+  "generated": "2022-12-27T21:13:00.114159Z",
   "generator": "pub",
   "generatorVersion": "2.18.4"
 }

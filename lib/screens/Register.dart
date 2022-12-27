@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/utils/colors_util.dart';
 
 import '../utils/widgets_util.dart';
+import 'Profile.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});

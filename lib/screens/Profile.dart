@@ -1,3 +1,4 @@
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -21,7 +22,45 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: hexStringToColor("#A5c9CA"),
       //Sobrepõe os Widgets
-      body: Stack(children: [
+      body: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), 
+          label: "Notificações"), 
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), 
+          label: "Perfil"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), 
+          label: "Cafofo")
+        ]),
+
+
+
+
+
+
+        
+        )
+      
+      
+      
+      
+      
+      ,)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ), Stack(children: [
         Positioned(
           top: 150,
           left: 50,

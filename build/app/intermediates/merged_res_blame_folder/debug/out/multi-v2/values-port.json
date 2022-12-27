@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ldyv/Documents/GitHub/Nosso-Cafofo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/2d3a7c8dcc9147c8f7402ccfe7ff6d4e/transformed/appcompat-1.1.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

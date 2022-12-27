@@ -23,6 +23,10 @@ MERGED from [com.google.firebase:firebase-installations:17.1.0] /home/ldyv/.grad
 MERGED from [com.google.firebase:firebase-installations:17.1.0] /home/ldyv/.gradle/caches/transforms-3/6f89cfa5433284bc40d136a5952d9deb/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:24:5-37:19
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:24:5-37:19
+MERGED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:33:5-54:19
+MERGED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:33:5-54:19
 MERGED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/ldyv/.gradle/caches/transforms-3/4a158101a2e26c8bca972f2424ead3d5/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
@@ -47,12 +51,20 @@ MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/ld
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/ldyv/.gradle/caches/transforms-3/b5408dfdb25185acdffd1589fef28baf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:30:5-60:19
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:30:5-60:19
+MERGED from [com.facebook.android:facebook-bolts:15.0.2] /home/ldyv/.gradle/caches/transforms-3/0ff95a1dff3cc9229189a28c9466f7a9/transformed/jetified-facebook-bolts-15.0.2/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-bolts:15.0.2] /home/ldyv/.gradle/caches/transforms-3/0ff95a1dff3cc9229189a28c9466f7a9/transformed/jetified-facebook-bolts-15.0.2/AndroidManifest.xml:28:5-29:19
 MERGED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/.gradle/caches/transforms-3/84a0e38767e413ee787b75f43fd1b6b6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/.gradle/caches/transforms-3/84a0e38767e413ee787b75f43fd1b6b6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:28:18-44
 	android:name
 		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
 manifest
@@ -64,6 +76,8 @@ MERGED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/Androi
 MERGED from [:firebase_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_secure_storage] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_facebook_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_facebook_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/e2750f32513b80f3cbe39160d48b6ce3/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/13ea35dac9fac7fde40dacb3cd12c6ca/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.2.0] /home/ldyv/.gradle/caches/transforms-3/c208442736972a517e11e7e56d6478df/transformed/jetified-firebase-common-ktx-20.2.0/AndroidManifest.xml:2:1-20:12
@@ -75,7 +89,10 @@ MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/ldyv/.gradl
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/ec708fa2c7fb52e121479faa05ec085d/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-installations:17.1.0] /home/ldyv/.gradle/caches/transforms-3/6f89cfa5433284bc40d136a5952d9deb/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:15:1-39:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha04] /home/ldyv/.gradle/caches/transforms-3/455a16b257bae03456b3e812578a8caa/transformed/jetified-security-crypto-1.1.0-alpha04/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.0.1] /home/ldyv/.gradle/caches/transforms-3/2020c4290ed108be00f86778d88c80e3/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:15:1-23:12
+MERGED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:21:1-56:12
 MERGED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/ldyv/.gradle/caches/transforms-3/4a158101a2e26c8bca972f2424ead3d5/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/ldyv/.gradle/caches/transforms-3/a82b072602b8387e729423e4e9aa1fb4/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
@@ -92,27 +109,46 @@ MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] /home
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/ldyv/.gradle/caches/transforms-3/070721cd86d3f2f2e25ab5430288669c/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/ldyv/.gradle/caches/transforms-3/b5408dfdb25185acdffd1589fef28baf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] /home/ldyv/.gradle/caches/transforms-3/777f4d9ecd43631248e3cc98892e4225/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/ldyv/.gradle/caches/transforms-3/2d3a7c8dcc9147c8f7402ccfe7ff6d4e/transformed/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39235027942f28d8cf39bf88130b6371/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.3.0] /home/ldyv/.gradle/caches/transforms-3/244c14f8ce302cd7b4fb7b48e64c240d/transformed/fragment-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.0] /home/ldyv/.gradle/caches/transforms-3/b9f10f2aaed2f7f20e98b85f0b4164a8/transformed/jetified-activity-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.4.0] /home/ldyv/.gradle/caches/transforms-3/19f7bae01fd307f360a3133a078074a7/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:21:1-62:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/ldyv/.gradle/caches/transforms-3/a125f9a7d732d142e2bfd86b1f0e4dca/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f6f2f153034a42f62b8a6803ed172405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0a71567900571f3a367888e07814d54/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-bolts:15.0.2] /home/ldyv/.gradle/caches/transforms-3/0ff95a1dff3cc9229189a28c9466f7a9/transformed/jetified-facebook-bolts-15.0.2/AndroidManifest.xml:21:1-31:12
+MERGED from [androidx.core:core-ktx:1.3.2] /home/ldyv/.gradle/caches/transforms-3/eb1b71035be4e0a4c61b45a0168492f1/transformed/jetified-core-ktx-1.3.2/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/ldyv/.gradle/caches/transforms-3/15a4856aca61fdce05db04974a419be7/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39ed3544dacb14eb6a87a4fe33467266/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/820308aa0d109e70c2412cdd742c490b/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] /home/ldyv/.gradle/caches/transforms-3/4d72d2673f051fb9379b017cf93b1c43/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /home/ldyv/.gradle/caches/transforms-3/7ab181f57fdcb2bb3c8feb624169f45a/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ldyv/.gradle/caches/transforms-3/0609247f11688d6e6b3605340a57fede/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ldyv/.gradle/caches/transforms-3/83b73cfcdf9cea4943494843cb957ef2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/847a6eee4a0c107fbccc7e99ea781be9/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ea6ac6123e17f4f3598f94582be99239/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/eb4d05d2fb995be8658de7ec2dac3211/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0ee489dc172841b92071320d85c6df8/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/ldyv/.gradle/caches/transforms-3/9edd4fb2b754428df921b3eb54f25e2f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/ldyv/.gradle/caches/transforms-3/0cae2180fa6be28b2974559445362712/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/ldyv/.gradle/caches/transforms-3/80e53f1e89dbb2741cf6727212b67b87/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/ldyv/.gradle/caches/transforms-3/c37074fc347a13c0ccea7c1c1bb6efe5/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f9b46eed61957d535733d49bf3c7889a/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/ldyv/.gradle/caches/transforms-3/1d0bbdf6f7db7012a6d912907f18180c/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/.gradle/caches/transforms-3/84a0e38767e413ee787b75f43fd1b6b6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f582cc8212402f3fb3c656d4f2e81469/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/ldyv/.gradle/caches/transforms-3/ae1b7b1b65c0ed5c6446f877d905d064/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/da698024963cb1a2082516ed51a8f0eb/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ldyv/.gradle/caches/transforms-3/3106e0cc7d185cdbfeb8609542db2b13/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ldyv/.gradle/caches/transforms-3/07b4bb4ce9c1a6b15094982af3f86f6a/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/1c61ce173803b648a0f18cbec54acb48/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] /home/ldyv/.gradle/caches/transforms-3/8a9f263ecbaa75a136236ab1ba5694d3/transformed/lifecycle-runtime-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] /home/ldyv/.gradle/caches/transforms-3/5a6ea52c1d2814634567b06507284ba4/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/ldyv/.gradle/caches/transforms-3/09d85ac2e01d46ebd96cded10ba2e491/transformed/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/ldyv/.gradle/caches/transforms-3/dc0228a9a940800524f68b24cbcdeedd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/ldyv/.gradle/caches/transforms-3/a133c23c866a32061bfa271a519bb384/transformed/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ldyv/.gradle/caches/transforms-3/0d349a90fe2c0faf6d361ddccce88d5a/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/ab1f36e6c085417bfae6bb85da2b57ff/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
 INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
@@ -140,6 +176,10 @@ MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/fire
 MERGED from [:firebase_core] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_secure_storage] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_secure_storage] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_facebook_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_facebook_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_facebook_auth] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_facebook_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/e2750f32513b80f3cbe39160d48b6ce3/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] /home/ldyv/.gradle/caches/transforms-3/e2750f32513b80f3cbe39160d48b6ce3/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.0] /home/ldyv/.gradle/caches/transforms-3/13ea35dac9fac7fde40dacb3cd12c6ca/transformed/jetified-firebase-analytics-ktx-21.2.0/AndroidManifest.xml:5:5-44
@@ -162,8 +202,14 @@ MERGED from [com.google.firebase:firebase-installations:17.1.0] /home/ldyv/.grad
 MERGED from [com.google.firebase:firebase-installations:17.1.0] /home/ldyv/.gradle/caches/transforms-3/6f89cfa5433284bc40d136a5952d9deb/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha04] /home/ldyv/.gradle/caches/transforms-3/455a16b257bae03456b3e812578a8caa/transformed/jetified-security-crypto-1.1.0-alpha04/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha04] /home/ldyv/.gradle/caches/transforms-3/455a16b257bae03456b3e812578a8caa/transformed/jetified-security-crypto-1.1.0-alpha04/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.0.1] /home/ldyv/.gradle/caches/transforms-3/2020c4290ed108be00f86778d88c80e3/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.1] /home/ldyv/.gradle/caches/transforms-3/2020c4290ed108be00f86778d88c80e3/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:15.0.2] /home/ldyv/.gradle/caches/transforms-3/bd65c6fd53bee5968a95e753ccbef0c5/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:25:5-27:41
+MERGED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:25:5-27:41
 MERGED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/ldyv/.gradle/caches/transforms-3/4a158101a2e26c8bca972f2424ead3d5/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
@@ -196,50 +242,90 @@ MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/ld
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/ldyv/.gradle/caches/transforms-3/b5408dfdb25185acdffd1589fef28baf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] /home/ldyv/.gradle/caches/transforms-3/777f4d9ecd43631248e3cc98892e4225/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /home/ldyv/.gradle/caches/transforms-3/777f4d9ecd43631248e3cc98892e4225/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/ldyv/.gradle/caches/transforms-3/2d3a7c8dcc9147c8f7402ccfe7ff6d4e/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/ldyv/.gradle/caches/transforms-3/2d3a7c8dcc9147c8f7402ccfe7ff6d4e/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39235027942f28d8cf39bf88130b6371/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39235027942f28d8cf39bf88130b6371/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.3.0] /home/ldyv/.gradle/caches/transforms-3/244c14f8ce302cd7b4fb7b48e64c240d/transformed/fragment-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.0] /home/ldyv/.gradle/caches/transforms-3/244c14f8ce302cd7b4fb7b48e64c240d/transformed/fragment-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.0] /home/ldyv/.gradle/caches/transforms-3/b9f10f2aaed2f7f20e98b85f0b4164a8/transformed/jetified-activity-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.0] /home/ldyv/.gradle/caches/transforms-3/b9f10f2aaed2f7f20e98b85f0b4164a8/transformed/jetified-activity-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] /home/ldyv/.gradle/caches/transforms-3/19f7bae01fd307f360a3133a078074a7/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] /home/ldyv/.gradle/caches/transforms-3/19f7bae01fd307f360a3133a078074a7/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/ldyv/.gradle/caches/transforms-3/a125f9a7d732d142e2bfd86b1f0e4dca/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/ldyv/.gradle/caches/transforms-3/a125f9a7d732d142e2bfd86b1f0e4dca/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f6f2f153034a42f62b8a6803ed172405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f6f2f153034a42f62b8a6803ed172405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0a71567900571f3a367888e07814d54/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0a71567900571f3a367888e07814d54/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-bolts:15.0.2] /home/ldyv/.gradle/caches/transforms-3/0ff95a1dff3cc9229189a28c9466f7a9/transformed/jetified-facebook-bolts-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-bolts:15.0.2] /home/ldyv/.gradle/caches/transforms-3/0ff95a1dff3cc9229189a28c9466f7a9/transformed/jetified-facebook-bolts-15.0.2/AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.core:core-ktx:1.3.2] /home/ldyv/.gradle/caches/transforms-3/eb1b71035be4e0a4c61b45a0168492f1/transformed/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] /home/ldyv/.gradle/caches/transforms-3/eb1b71035be4e0a4c61b45a0168492f1/transformed/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/ldyv/.gradle/caches/transforms-3/15a4856aca61fdce05db04974a419be7/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/ldyv/.gradle/caches/transforms-3/15a4856aca61fdce05db04974a419be7/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39ed3544dacb14eb6a87a4fe33467266/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/39ed3544dacb14eb6a87a4fe33467266/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/820308aa0d109e70c2412cdd742c490b/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/820308aa0d109e70c2412cdd742c490b/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /home/ldyv/.gradle/caches/transforms-3/4d72d2673f051fb9379b017cf93b1c43/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /home/ldyv/.gradle/caches/transforms-3/4d72d2673f051fb9379b017cf93b1c43/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /home/ldyv/.gradle/caches/transforms-3/7ab181f57fdcb2bb3c8feb624169f45a/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/ldyv/.gradle/caches/transforms-3/7ab181f57fdcb2bb3c8feb624169f45a/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ldyv/.gradle/caches/transforms-3/0609247f11688d6e6b3605340a57fede/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ldyv/.gradle/caches/transforms-3/0609247f11688d6e6b3605340a57fede/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ldyv/.gradle/caches/transforms-3/83b73cfcdf9cea4943494843cb957ef2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ldyv/.gradle/caches/transforms-3/83b73cfcdf9cea4943494843cb957ef2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/847a6eee4a0c107fbccc7e99ea781be9/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/847a6eee4a0c107fbccc7e99ea781be9/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ea6ac6123e17f4f3598f94582be99239/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ea6ac6123e17f4f3598f94582be99239/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/eb4d05d2fb995be8658de7ec2dac3211/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/eb4d05d2fb995be8658de7ec2dac3211/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0ee489dc172841b92071320d85c6df8/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ldyv/.gradle/caches/transforms-3/e0ee489dc172841b92071320d85c6df8/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/ldyv/.gradle/caches/transforms-3/9edd4fb2b754428df921b3eb54f25e2f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/ldyv/.gradle/caches/transforms-3/9edd4fb2b754428df921b3eb54f25e2f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.6.0] /home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/ldyv/.gradle/caches/transforms-3/0cae2180fa6be28b2974559445362712/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/ldyv/.gradle/caches/transforms-3/0cae2180fa6be28b2974559445362712/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/ldyv/.gradle/caches/transforms-3/80e53f1e89dbb2741cf6727212b67b87/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/ldyv/.gradle/caches/transforms-3/80e53f1e89dbb2741cf6727212b67b87/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/ldyv/.gradle/caches/transforms-3/c37074fc347a13c0ccea7c1c1bb6efe5/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/ldyv/.gradle/caches/transforms-3/c37074fc347a13c0ccea7c1c1bb6efe5/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /home/ldyv/.gradle/caches/transforms-3/ca8061868bb9d664b0813479a090dbea/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f9b46eed61957d535733d49bf3c7889a/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f9b46eed61957d535733d49bf3c7889a/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/ldyv/.gradle/caches/transforms-3/1d0bbdf6f7db7012a6d912907f18180c/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/ldyv/.gradle/caches/transforms-3/1d0bbdf6f7db7012a6d912907f18180c/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/.gradle/caches/transforms-3/84a0e38767e413ee787b75f43fd1b6b6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ldyv/.gradle/caches/transforms-3/84a0e38767e413ee787b75f43fd1b6b6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f582cc8212402f3fb3c656d4f2e81469/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ldyv/.gradle/caches/transforms-3/f582cc8212402f3fb3c656d4f2e81469/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/ldyv/.gradle/caches/transforms-3/ae1b7b1b65c0ed5c6446f877d905d064/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/ldyv/.gradle/caches/transforms-3/ae1b7b1b65c0ed5c6446f877d905d064/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/da698024963cb1a2082516ed51a8f0eb/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ldyv/.gradle/caches/transforms-3/da698024963cb1a2082516ed51a8f0eb/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ldyv/.gradle/caches/transforms-3/3106e0cc7d185cdbfeb8609542db2b13/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ldyv/.gradle/caches/transforms-3/3106e0cc7d185cdbfeb8609542db2b13/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ldyv/.gradle/caches/transforms-3/07b4bb4ce9c1a6b15094982af3f86f6a/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ldyv/.gradle/caches/transforms-3/07b4bb4ce9c1a6b15094982af3f86f6a/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/1c61ce173803b648a0f18cbec54acb48/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/ldyv/.gradle/caches/transforms-3/1c61ce173803b648a0f18cbec54acb48/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] /home/ldyv/.gradle/caches/transforms-3/8a9f263ecbaa75a136236ab1ba5694d3/transformed/lifecycle-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] /home/ldyv/.gradle/caches/transforms-3/8a9f263ecbaa75a136236ab1ba5694d3/transformed/lifecycle-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] /home/ldyv/.gradle/caches/transforms-3/5a6ea52c1d2814634567b06507284ba4/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] /home/ldyv/.gradle/caches/transforms-3/5a6ea52c1d2814634567b06507284ba4/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/ldyv/.gradle/caches/transforms-3/09d85ac2e01d46ebd96cded10ba2e491/transformed/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] /home/ldyv/.gradle/caches/transforms-3/09d85ac2e01d46ebd96cded10ba2e491/transformed/lifecycle-viewmodel-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/ldyv/.gradle/caches/transforms-3/dc0228a9a940800524f68b24cbcdeedd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/ldyv/.gradle/caches/transforms-3/dc0228a9a940800524f68b24cbcdeedd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/ldyv/.gradle/caches/transforms-3/9d896b295fd6eac4b1ce02a2e39c9d03/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/ldyv/.gradle/caches/transforms-3/a133c23c866a32061bfa271a519bb384/transformed/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] /home/ldyv/.gradle/caches/transforms-3/a133c23c866a32061bfa271a519bb384/transformed/lifecycle-livedata-core-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ldyv/.gradle/caches/transforms-3/0d349a90fe2c0faf6d361ddccce88d5a/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/ldyv/.gradle/caches/transforms-3/0d349a90fe2c0faf6d361ddccce88d5a/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/ab1f36e6c085417bfae6bb85da2b57ff/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/ldyv/.gradle/caches/transforms-3/ab1f36e6c085417bfae6bb85da2b57ff/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
 INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
 INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_secure_storage] /home/ldyv/Documents/GitHub/Nosso-Cafofo/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-50
 	android:targetSdkVersion
 		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/ldyv/Documents/GitHub/Nosso-Cafofo/android/app/src/debug/AndroidManifest.xml
@@ -410,6 +496,8 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/l
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/ldyv/.gradle/caches/transforms-3/c2a7c8f686064bc6524a9cedd001f790/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/3d035e136ffde9431851727c2123fd4d/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/3d035e136ffde9431851727c2123fd4d/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml:26:5-79
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:28:5-79
+MERGED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:28:5-79
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] /home/ldyv/.gradle/caches/transforms-3/ec708fa2c7fb52e121479faa05ec085d/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:25:22-76
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
@@ -436,6 +524,36 @@ ADDED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/cache
 		ADDED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-common:20.2.0] /home/ldyv/.gradle/caches/transforms-3/bbefe9d41c1fe692bf588054dbff3b26/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+queries
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:29:5-31:15
+package#com.facebook.katana
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:30:9-55
+	android:name
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:30:18-52
+activity#com.facebook.FacebookActivity
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:34:9-37:66
+	android:configChanges
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:36:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:37:13-63
+	android:name
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:35:13-57
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:38:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:38:19-68
+activity#com.facebook.CustomTabActivity
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:39:9-53:20
+	tools:node
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:42:13-31
+	android:exported
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:41:13-36
+	android:name
+		ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:40:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.${applicationId}+data:scheme:fbconnect
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:43:13-52:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.example.nosso_cafofo+data:scheme:fbconnect
+ADDED from [com.facebook.android:facebook-common:15.0.2] /home/ldyv/.gradle/caches/transforms-3/5276009bbca046e0330a8568478a600b/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:43:13-52:29
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:20.0.1] /home/ldyv/.gradle/caches/transforms-3/82af46c8a3704f8bc57942890a326145/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -468,6 +586,8 @@ uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_S
 ADDED from [com.google.android.gms:play-services-measurement:21.2.0] /home/ldyv/.gradle/caches/transforms-3/4daaa447a557e7620f96a76ee8537ef4/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] /home/ldyv/.gradle/caches/transforms-3/bb932eec4e0d6cb3598bf755f2e11e58/transformed/jetified-play-services-measurement-impl-21.2.0/AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] /home/ldyv/.gradle/caches/transforms-3/bb932eec4e0d6cb3598bf755f2e11e58/transformed/jetified-play-services-measurement-impl-21.2.0/AndroidManifest.xml:26:5-110
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/ldyv/.gradle/caches/transforms-3/16d46964407ffe22e5e6bb0a26f24b7f/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] /home/ldyv/.gradle/caches/transforms-3/4daaa447a557e7620f96a76ee8537ef4/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
@@ -502,3 +622,35 @@ ADDED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gr
 		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /home/ldyv/.gradle/caches/transforms-3/65cc1d410cae6c32546687924703567f/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:41:9-44:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:43:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:44:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:42:13-70
+receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:46:9-52:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:48:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:47:13-86
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:49:13-51:29
+action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:50:25-92
+receiver#com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:53:9-59:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:54:13-118
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:56:13-58:29
+action#com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:57:17-103
+	android:name
+		ADDED from [com.facebook.android:facebook-core:15.0.2] /home/ldyv/.gradle/caches/transforms-3/494669c196e46d91f6fcfc4ed96c083d/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:57:25-100
