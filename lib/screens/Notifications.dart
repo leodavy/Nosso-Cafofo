@@ -7,8 +7,8 @@ class Notifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: hexStringToColor("#A5c9CA"),
-        child: Center(child: Text("Notificações")));
+    return Scaffold(
+        backgroundColor: hexStringToColor("#A5c9CA"),
+        body: Center(child: Text("Notificações")));
   }
 }

@@ -6,7 +6,7 @@ import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
-import 'package:nosso_cafofo/screens/ModifyProfile.dart';
+import 'package:nosso_cafofo/screens/EditProfile.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
 
 void main() async {
@@ -27,7 +27,7 @@ class NossoCafofo extends StatelessWidget {
         '/ForgotPassword': (context) => ForgotPassword(),
         '/Register': (context) => Register(),
         '/Profile': (context) => Profile(),
-        "/ModifyProfile": (context) => ModifyProfile(),
+        "/EditProfile": (context) => EditProfile(),
         "/Notifications": (context) => Notifications(),
         "/Cafofo": ((context) => Cafofo()),
       },

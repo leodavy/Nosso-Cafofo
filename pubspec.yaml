@@ -25,6 +25,8 @@ dependencies:
 
   #Google Icon
   font_awesome_flutter: ^10.2.1
+  firebase_storage: ^11.0.10
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:
