@@ -7,7 +7,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import 'Register.dart';
-import 'Profile.dart';
+import "Profile.dart";
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -73,7 +73,14 @@ class _LoginState extends State<Login> {
               "FFFFFF",
               "DDDDDD",
               "#2c3333", () {
-            _googleSignIn.signIn();
+            _googleSignIn.signIn().then((value) {
+              print("Signed in");
+              Navigator.pushNamed(context, "/Profile");
+            }).onError((error, stackTrace) {
+              print(error);
+              print(stackTrace);
+            });
+            ;
           }),
           //Logins extras, adicionar se der tempo
           /*externalSignIn(
