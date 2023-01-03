@@ -7,7 +7,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import 'Register.dart';
-import 'Profile.dart';
+import "Profile.dart";
 
 class Login extends StatefulWidget {
   const Login({super.key});
