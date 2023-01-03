@@ -73,7 +73,14 @@ class _LoginState extends State<Login> {
               "FFFFFF",
               "DDDDDD",
               "#2c3333", () {
-            _googleSignIn.signIn();
+            _googleSignIn.signIn().then((value) {
+              print("Signed in");
+              Navigator.pushNamed(context, "/Profile");
+            }).onError((error, stackTrace) {
+              print(error);
+              print(stackTrace);
+            });
+            ;
           }),
           //Logins extras, adicionar se der tempo
           /*externalSignIn(

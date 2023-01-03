@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/utils/colors_util.dart';
+
 import '../utils/widgets_util.dart';
 
 class Register extends StatefulWidget {
@@ -66,8 +67,9 @@ class _RegisterState extends State<Register> {
               height: 15,
             ),
             signInAndUpButton(context, false, () {
-              if (_confirmPasswordTextController.toString() ==
-                  _passwordTextController.toString()) {
+              if (_passwordTextController.text
+                      .compareTo(_confirmPasswordTextController.text) ==
+                  0) {
                 FirebaseAuth.instance
                     .createUserWithEmailAndPassword(
                         email: _emailTextController.text,
@@ -79,8 +81,6 @@ class _RegisterState extends State<Register> {
                 }).onError((error, stackTrace) {
                   print("Error ${error.toString()}");
                 });
-                _incorrectPassword = SizedBox();
-                setState(() {});
               } else {
                 _incorrectPassword = incorrectPassword();
                 setState(() {});
