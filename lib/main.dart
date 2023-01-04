@@ -1,13 +1,17 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nosso_cafofo/screens/Finances.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:nosso_cafofo/screens/Notifications.dart';
 import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/screens/Register.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
+import 'package:nosso_cafofo/screens/Residents.dart';
+import 'package:nosso_cafofo/screens/Shopping.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
 import 'package:nosso_cafofo/screens/EditProfile.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
+import 'package:nosso_cafofo/screens/Tasks.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +24,7 @@ class NossoCafofo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/Profile",
+      initialRoute: "/Splash",
       routes: {
         "/Splash": (context) => Splash(),
         '/login': (context) => Login(),
@@ -30,6 +34,10 @@ class NossoCafofo extends StatelessWidget {
         "/EditProfile": (context) => EditProfile(),
         "/Notifications": (context) => Notifications(),
         "/Cafofo": ((context) => Cafofo()),
+        "/Shopping": ((context) => Shopping()),
+        "/Finances": ((context) => Finances()),
+        "/Tasks": ((context) => Tasks()),
+        "/Residents": ((context) => Residents())
       },
     );
   }
