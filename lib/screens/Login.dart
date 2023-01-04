@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
@@ -72,15 +73,12 @@ class _LoginState extends State<Login> {
               "assets/images/Login/googleicon.png",
               "FFFFFF",
               "DDDDDD",
-              "#2c3333", () {
-            _googleSignIn.signIn().then((value) {
-              print("Signed in");
+              "#2c3333", () async {
+            User? user =
+                await Authentication.signInWithGoogle(context: context);
+            if (user != null) {
               Navigator.pushNamed(context, "/Profile");
-            }).onError((error, stackTrace) {
-              print(error);
-              print(stackTrace);
-            });
-            ;
+            }
           }),
           //Logins extras, adicionar se der tempo
           /*externalSignIn(
@@ -160,3 +158,50 @@ Future<UserCredential> signInWithFacebook() async {
 
   return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
 }*/
+
+class Authentication {
+  static Future<User?> signInWithGoogle({required BuildContext context}) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user;
+
+    if (kIsWeb) {
+      GoogleAuthProvider authProvider = GoogleAuthProvider();
+
+      try {
+        final UserCredential userCredential =
+            await auth.signInWithPopup(authProvider);
+
+        user = userCredential.user;
+      } catch (e) {
+        print(e);
+      }
+    } else {
+      final GoogleSignIn googleSignIn = GoogleSignIn();
+
+      final GoogleSignInAccount? googleSignInAccount =
+          await googleSignIn.signIn();
+
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount.authentication;
+
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
+
+        try {
+          final UserCredential userCredential =
+              await auth.signInWithCredential(credential);
+
+          user = userCredential.user;
+        } on FirebaseAuthException catch (e) {
+          if (e.code == 'account-exists-with-different-credential') {
+          } else if (e.code == 'invalid-credential') {}
+        } catch (e) {}
+      }
+    }
+
+    return user;
+  }
+}
