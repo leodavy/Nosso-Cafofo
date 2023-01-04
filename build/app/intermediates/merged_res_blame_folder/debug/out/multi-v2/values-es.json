@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/ldyv/.gradle/caches/transforms-3/91f744c1c21fcfe281b2bb04dda7e85b/transformed/core-1.6.0/res/values-es/values-es.xml",
+                    "source": "/home/ldyv/.gradle/caches/transforms-3/834f1b65fcdebffba3ca7ef65e4ce025/transformed/core-1.8.0/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

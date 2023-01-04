@@ -3,7 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
-import 'package:nosso_cafofo/screens/ModifyProfile.dart';
+import 'package:nosso_cafofo/screens/EditProfile.dart';
 import '../utils/colors_util.dart';
 import 'Notifications.dart';
 
@@ -38,13 +38,7 @@ class _ProfileState extends State<Profile> {
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.notifications), label: 'Notificações'),
-            BottomNavigationBarItem(
-                icon: CircleAvatar(
-                  radius: 30,
-                  backgroundImage: NetworkImage(
-                      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"),
-                ),
-                label: 'Profile'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Cafofo'),
           ]),
       body: IndexedStack(
@@ -88,7 +82,7 @@ class Profilee extends StatelessWidget {
                       backgroundColor: hexStringToColor("#E7F6F2"),
                       foregroundColor: hexStringToColor("#2C3333")),
                   onPressed: () {
-                    Navigator.pushNamed(context, "/ModifyProfile");
+                    Navigator.pushNamed(context, "/EditProfile");
                   },
                   child: Text("Alterar Perfil"),
                 ),
