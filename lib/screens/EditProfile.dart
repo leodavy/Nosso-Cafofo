@@ -5,6 +5,7 @@ import 'package:nosso_cafofo/screens/Profile.dart';
 import 'dart:io';
 
 import '../utils/colors_util.dart';
+import '../utils/widgets_util.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -37,61 +38,62 @@ class _EditProfileState extends State<EditProfile> {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _emailTextController = TextEditingController();
+    bool textcenter = true;
     return Scaffold(
-        appBar: AppBar(
-          elevation: 0.0,
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pushNamed(context, "/Profile");
-            },
+        appBar: PreferredSize(
+          preferredSize: AppBar().preferredSize,
+          child: SafeArea(
+            child: Container(
+              child: AppBar(
+                  iconTheme: IconThemeData(color: hexStringToColor("#2C3333")),
+                  title: Text("Editar Perfil",
+                      style: TextStyle(color: hexStringToColor("#2C3333"))),
+                  centerTitle: textcenter,
+                  backgroundColor: hexStringToColor("#E7F6F2"),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(25.0),
+                          bottomRight: Radius.circular(25.0)))),
+            ),
           ),
         ),
         backgroundColor: hexStringToColor("#A5c9CA"),
-        body: Stack(children: <Widget>[
-          Positioned(
-            left: MediaQuery.of(context).size.width / 4,
-            width: MediaQuery.of(context).size.width / 2,
-            top: MediaQuery.of(context).size.height / 50,
-            child: Column(
-              children: <Widget>[
-                GestureDetector(onTap: () {
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () {
                   pickUploadImage();
-                }),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.height / 4.2,
-                  alignment: Alignment.center,
-                  child: Center(
-                      child: imageUrl == " "
-                          ? const CircleAvatar(
-                              radius: 100,
-                            )
-                          : Image.network(imageUrl)),
+                },
+                child: CircleAvatar(
+                  radius: 100,
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.height / 15,
-                  child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Alterar foto de perfil",
-                        style: TextStyle(color: hexStringToColor("#2C3333")),
-                      )),
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.width / 2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(24.0),
-                    color: hexStringToColor("#E7F6F2"),
-                  ),
-                  child: SizedBox(child: Text("Nome")),
-                )
-              ],
-            ),
-          )
-        ]));
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 30,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: reusableTextField("E-mail", false, _emailTextController),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 40,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/ForgotPassword");
+                  },
+                  child: Text(
+                    "Redefinir senha",
+                    style: TextStyle(color: hexStringToColor("#2C3333")),
+                  ))
+            ],
+          ),
+        ));
   }
 }

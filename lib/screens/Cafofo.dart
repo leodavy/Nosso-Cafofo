@@ -14,7 +14,8 @@ class Cafofo extends StatelessWidget {
             child: SafeArea(
                 child: Container(
                     child: AppBar(
-                        title: Text("Menu do Cafofo",
+                        automaticallyImplyLeading: false,
+                        title: Text("Cafofo",
                             style:
                                 TextStyle(color: hexStringToColor("#2C3333"))),
                         centerTitle: textcenter,
@@ -53,7 +54,7 @@ class Cafofo extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/Tasks");
                 },
-                icon: Icon(Icons.cleaning_services_rounded, size: 100),
+                icon: Icon(Icons.local_laundry_service, size: 100),
               ),
             ),
             Container(

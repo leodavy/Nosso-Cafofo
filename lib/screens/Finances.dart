@@ -16,6 +16,7 @@ class Finances extends StatelessWidget {
           child: SafeArea(
             child: Container(
               child: AppBar(
+                  iconTheme: IconThemeData(color: hexStringToColor("#2C3333")),
                   title: Text("Finanças",
                       style: TextStyle(color: hexStringToColor("#2C3333"))),
                   centerTitle: textcenter,
