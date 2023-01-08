@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import 'Register.dart';
-import "Profile.dart";
+import 'Profile.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

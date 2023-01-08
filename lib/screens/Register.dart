@@ -77,7 +77,7 @@ class _RegisterState extends State<Register> {
                     .then((value) {
                   print("Created new acount");
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Profile()));
+                      MaterialPageRoute(builder: (context) => BotNavBar()));
                 }).onError((error, stackTrace) {
                   print("Error ${error.toString()}");
                 });

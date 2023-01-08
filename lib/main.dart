@@ -9,7 +9,7 @@ import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/screens/Residents.dart';
 import 'package:nosso_cafofo/screens/Shopping.dart';
 import 'package:nosso_cafofo/screens/Splash.dart';
-import 'package:nosso_cafofo/screens/EditProfile.dart';
+
 import 'package:nosso_cafofo/screens/Cafofo.dart';
 import 'package:nosso_cafofo/screens/Tasks.dart';
 
@@ -30,8 +30,7 @@ class NossoCafofo extends StatelessWidget {
         '/login': (context) => Login(),
         '/ForgotPassword': (context) => ForgotPassword(),
         '/Register': (context) => Register(),
-        '/Profile': (context) => Profile(),
-        "/EditProfile": (context) => EditProfile(),
+        '/Profile': (context) => BotNavBar(),
         "/Notifications": (context) => Notifications(),
         "/Cafofo": ((context) => Cafofo()),
         "/Shopping": ((context) => Shopping()),
