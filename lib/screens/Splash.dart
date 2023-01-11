@@ -31,8 +31,9 @@ class _SplashState extends State<Splash> {
     return Container(
       color: hexStringToColor("#A5c9CA"),
       child: Container(
-          child: Image.asset(
-              "assets/images/SplashScreen/SplashScreenIcon.png")), //Logo no topo
+        padding: EdgeInsets.all(MediaQuery.of(context).size.height / 10),
+        child: Image.asset("assets/images/LOGOCAFOFONOME.png"),
+      ), //Logo no topo
     );
   }
 }

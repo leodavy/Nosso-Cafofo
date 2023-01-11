@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
         color: hexStringToColor("#A5c9CA"),
         child: ListView(children: <Widget>[
-          imgWidget("assets/images/Icone.png", 180, 180),
+          imgWidget("assets/images/LOGOCAFOFONOME.png", 180, 180),
           SizedBox(height: 40), //para separar iconece das lacunas email/senha
           SizedBox(
             height: 30,
