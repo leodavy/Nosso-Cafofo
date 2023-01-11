@@ -1,6 +1,6 @@
 # Nosso Cafofo
 
-Projeto de aplicativo para a disciplina de Programação para dispositivos móveis.
+Projeto de aplicativo para a disciplina de Programação para dispositivos móveis
 
 ## Desenvolvedores:
 
