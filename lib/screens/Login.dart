@@ -4,6 +4,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:nosso_cafofo/utils/userManagement.dart';
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
@@ -21,7 +22,7 @@ class _LoginState extends State<Login> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-
+  User? user = null;
   Widget _errorWidget = SizedBox();
 
   @override
@@ -74,10 +75,11 @@ class _LoginState extends State<Login> {
               "FFFFFF",
               "DDDDDD",
               "#2c3333", () async {
-            User? user =
-                await Authentication.signInWithGoogle(context: context);
+            user = await Authentication.signInWithGoogle(context: context);
             if (user != null) {
-              Navigator.pushNamed(context, "/Profile");
+              userManagement().storeNewUser(
+                  user, user?.displayName, user?.photoURL, context);
+              //Navigator.pushNamed(context, "/Profile");
             }
           }),
           //Logins extras, adicionar se der tempo
@@ -148,16 +150,6 @@ class _LoginState extends State<Login> {
     );
   }
 }
-/*
-Future<UserCredential> signInWithFacebook() async {
-  final LoginResult loginResult = await FacebookAuth.instance
-      .login(permissions: ['email', 'public_profile']);
-
-  final OAuthCredential facebookAuthCredential =
-      FacebookAuthProvider.credential(loginResult.accessToken!.token);
-
-  return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
-}*/
 
 class Authentication {
   static Future<User?> signInWithGoogle({required BuildContext context}) async {
@@ -205,3 +197,14 @@ class Authentication {
     return user;
   }
 }
+
+/*
+Future<UserCredential> signInWithFacebook() async {
+  final LoginResult loginResult = await FacebookAuth.instance
+      .login(permissions: ['email', 'public_profile']);
+
+  final OAuthCredential facebookAuthCredential =
+      FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+  return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+}*/
