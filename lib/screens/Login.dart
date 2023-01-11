@@ -21,7 +21,7 @@ class _LoginState extends State<Login> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-
+  User? user = null;
   Widget _errorWidget = SizedBox();
 
   @override
@@ -74,8 +74,7 @@ class _LoginState extends State<Login> {
               "FFFFFF",
               "DDDDDD",
               "#2c3333", () async {
-            User? user =
-                await Authentication.signInWithGoogle(context: context);
+            user = await Authentication.signInWithGoogle(context: context);
             if (user != null) {
               Navigator.pushNamed(context, "/Profile");
             }
