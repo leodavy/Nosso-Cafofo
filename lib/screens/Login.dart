@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
@@ -77,9 +78,16 @@ class _LoginState extends State<Login> {
               "#2c3333", () async {
             user = await Authentication.signInWithGoogle(context: context);
             if (user != null) {
-              userManagement().storeNewUser(
-                  user, user?.displayName, user?.photoURL, context);
-              //Navigator.pushNamed(context, "/Profile");
+              if (!(await FirebaseFirestore.instance
+                      .collection('users')
+                      .doc(user?.email)
+                      .get())
+                  .exists) {
+                userManagement().storeNewUser(
+                    user, user?.displayName, user?.photoURL, context);
+              } else {
+                Navigator.pushNamed(context, "/Profile");
+              }
             }
           }),
           //Logins extras, adicionar se der tempo
