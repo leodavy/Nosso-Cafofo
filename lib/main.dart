@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nosso_cafofo/screens/ChangeEmail.dart';
 import 'package:nosso_cafofo/screens/Finances.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:nosso_cafofo/screens/Notifications.dart';
@@ -36,7 +37,8 @@ class NossoCafofo extends StatelessWidget {
         "/Shopping": ((context) => Shopping()),
         "/Finances": ((context) => Finances()),
         "/Tasks": ((context) => Tasks()),
-        "/Residents": ((context) => Residents())
+        "/Residents": ((context) => Residents()),
+        "/ChangeEmail": ((context) => ChangeEmail())
       },
     );
   }

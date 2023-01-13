@@ -11,10 +11,9 @@ class userManagement {
 
     FirebaseFirestore.instance
         .collection('users')
-        .doc(firebaseUser?.uid)
+        .doc(firebaseUser?.email)
         .set({
           'email': user.email,
-          'uid': user.uid,
           'name': userName,
           'profilePic': profilePic ?? ''
         })
@@ -30,11 +29,23 @@ class userManagement {
     if (firebaseUser != null) {
       await FirebaseFirestore.instance
           .collection('users')
-          .doc(firebaseUser.uid)
+          .doc(firebaseUser.email)
           .get()
           .then((table) {
         return table.data()![field];
       }).catchError((e) {
+        print(e);
+      });
+    }
+  }
+
+  set(String field, value) async {
+    final firebaseUser = await FirebaseAuth.instance.currentUser;
+    if (firebaseUser != null) {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(firebaseUser.email)
+          .set({field: value}).catchError((e) {
         print(e);
       });
     }
