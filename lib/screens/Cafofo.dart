@@ -41,7 +41,8 @@ class Cafofo extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/Shopping");
                 },
-                icon: Icon(Icons.shopping_cart, size: 100),
+                icon: Icon(Icons.shopping_cart,
+                    color: hexStringToColor("#395B64"), size: 100),
               ),
             ),
             Container(
@@ -54,7 +55,8 @@ class Cafofo extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/Tasks");
                 },
-                icon: Icon(Icons.local_laundry_service, size: 100),
+                icon: Icon(Icons.local_laundry_service,
+                    color: hexStringToColor("#395B64"), size: 100),
               ),
             ),
             Container(
@@ -67,7 +69,8 @@ class Cafofo extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/Finances");
                 },
-                icon: Icon(Icons.monetization_on, size: 100),
+                icon: Icon(Icons.monetization_on,
+                    color: hexStringToColor("#395B64"), size: 100),
               ),
             ),
             Container(
@@ -80,7 +83,8 @@ class Cafofo extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, "/Residents");
                 },
-                icon: Icon(Icons.people, size: 100),
+                icon: Icon(Icons.people,
+                    color: hexStringToColor("#395B64"), size: 100),
               ),
             )
           ],
