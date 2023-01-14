@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+//import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:nosso_cafofo/utils/externalAuth.dart';
 import 'package:nosso_cafofo/utils/userManagement.dart';
 
 import '../utils/colors_util.dart';
@@ -23,7 +25,6 @@ class _LoginState extends State<Login> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-  User? user = null;
   Widget _errorWidget = SizedBox();
 
   @override
@@ -75,20 +76,22 @@ class _LoginState extends State<Login> {
               "assets/images/Login/googleicon.png",
               "FFFFFF",
               "DDDDDD",
-              "#2c3333", () async {
-            user = await Authentication.signInWithGoogle(context: context);
-            if (user != null) {
+              "#2c3333", () {
+            auth().signInWithGoogle().then((value) async {
               if (!(await FirebaseFirestore.instance
                       .collection('users')
-                      .doc(user?.email)
+                      .doc(FirebaseAuth.instance.currentUser?.email)
                       .get())
                   .exists) {
                 userManagement().storeNewUser(
-                    user, user?.displayName, user?.photoURL, context);
+                    FirebaseAuth.instance.currentUser,
+                    FirebaseAuth.instance.currentUser?.displayName,
+                    FirebaseAuth.instance.currentUser?.photoURL,
+                    context);
               } else {
                 Navigator.pushNamed(context, "/Profile");
               }
-            }
+            });
           }),
           //Logins extras, adicionar se der tempo
           /*externalSignIn(
@@ -159,52 +162,6 @@ class _LoginState extends State<Login> {
   }
 }
 
-class Authentication {
-  static Future<User?> signInWithGoogle({required BuildContext context}) async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User? user;
-
-    if (kIsWeb) {
-      GoogleAuthProvider authProvider = GoogleAuthProvider();
-
-      try {
-        final UserCredential userCredential =
-            await auth.signInWithPopup(authProvider);
-
-        user = userCredential.user;
-      } catch (e) {
-        print(e);
-      }
-    } else {
-      final GoogleSignIn googleSignIn = GoogleSignIn();
-
-      final GoogleSignInAccount? googleSignInAccount =
-          await googleSignIn.signIn();
-
-      if (googleSignInAccount != null) {
-        final GoogleSignInAuthentication googleSignInAuthentication =
-            await googleSignInAccount.authentication;
-
-        final AuthCredential credential = GoogleAuthProvider.credential(
-          accessToken: googleSignInAuthentication.accessToken,
-          idToken: googleSignInAuthentication.idToken,
-        );
-
-        try {
-          final UserCredential userCredential =
-              await auth.signInWithCredential(credential);
-
-          user = userCredential.user;
-        } on FirebaseAuthException catch (e) {
-          if (e.code == 'account-exists-with-different-credential') {
-          } else if (e.code == 'invalid-credential') {}
-        } catch (e) {}
-      }
-    }
-
-    return user;
-  }
-}
 
 /*
 Future<UserCredential> signInWithFacebook() async {
