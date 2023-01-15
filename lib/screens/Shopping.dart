@@ -16,27 +16,50 @@ class _ShoppingState extends State<Shopping> {
   Widget build(BuildContext context) {
     final bool textcenter = true;
     final GlobalKey<AnimatedListState> _key = GlobalKey();
+    final TextEditingController _controller = TextEditingController();
 
-    void _addItem() {
-      _items.insert(0, "Item ${_items.length + 1}");
+    void _addItem(String title) {
+      _items.insert(0, title);
       _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
+    }
+
+    Future<void> addDialog(BuildContext context) {
+      return showDialog(
+          context: context,
+          builder: ((context) {
+            return AlertDialog(
+              backgroundColor: hexStringToColor("#E7F6F2"),
+              title: const Text(
+                'Adicione um item à lista:',
+              ),
+              content: TextField(
+                cursorColor: hexStringToColor("#2C3333"),
+                controller: _controller,
+                decoration: const InputDecoration(
+                  hintText: '',
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    _addItem(_controller.text);
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Adicionar',
+                      style: TextStyle(color: Colors.black)),
+                )
+              ],
+            );
+          }));
     }
 
     void _removeItem(int index) {
       _key.currentState!.removeItem(index, (_, animation) {
-        return SizeTransition(
-          sizeFactor: animation,
-          child: const Card(
-            margin: EdgeInsets.all(10),
-            elevation: 10,
-            color: Colors.purple,
-            child: ListTile(
-              contentPadding: EdgeInsets.all(15),
-              title: Text("removing", style: TextStyle(fontSize: 24)),
-            ),
-          ),
-        );
-        ;
+        return Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
+            child: SizeTransition(
+              sizeFactor: animation,
+            ));
       }, duration: const Duration(seconds: 1));
 
       _items.removeAt(index);
@@ -64,33 +87,34 @@ class _ShoppingState extends State<Shopping> {
       body: AnimatedList(
         key: _key,
         itemBuilder: (context, index, animation) {
-          return SizeTransition(
-              key: UniqueKey(),
-              sizeFactor: animation,
-              child: Card(
-                margin: const EdgeInsets.all(10),
-                elevation: 10,
-                color: Colors.blue,
-                child: ListTile(
-                  contentPadding: const EdgeInsets.all(15),
-                  title: Text(
-                    _items[index],
-                    style: TextStyle(fontSize: 24, color: Colors.white),
-                  ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.delete),
-                    color: Colors.redAccent,
-                    onPressed: () {
-                      _removeItem(index);
-                    },
-                  ),
-                ),
-              ));
+          return Container(
+            alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                color: hexStringToColor("#E7F6F2")),
+            child: ListTile(
+              contentPadding: const EdgeInsets.all(15),
+              title: Text(
+                _items[index],
+                style: TextStyle(fontSize: 24, color: Colors.black),
+              ),
+              trailing: IconButton(
+                icon: Icon(Icons.delete),
+                color: Colors.redAccent,
+                onPressed: () {
+                  _removeItem(index);
+                },
+              ),
+            ),
+          );
         },
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: hexStringToColor("#395B64"),
-        onPressed: _addItem,
+        onPressed: () {
+          _controller.clear();
+          addDialog(context);
+        },
         child: const Icon(Icons.add, size: 30),
       ),
     );
