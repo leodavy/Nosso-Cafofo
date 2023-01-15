@@ -21,7 +21,7 @@ class userManagement {
           'profilePic': profilePic ?? ''
         })
         .then((value) => Navigator.push(
-            context, MaterialPageRoute(builder: (context) => BotNavBar())))
+            context, MaterialPageRoute(builder: (context) => Profile())))
         .catchError((e) {
           print(e);
         });

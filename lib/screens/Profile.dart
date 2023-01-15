@@ -8,6 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
+import 'package:nosso_cafofo/utils/externalAuth.dart';
 import 'package:path/path.dart';
 
 import '../utils/colors_util.dart';
@@ -27,24 +28,40 @@ class _ProfileState extends State<Profile> {
 
   TextEditingController _textEditingController = TextEditingController();
 
-  Future _getDataFromDatabase() async {
-    await FirebaseFirestore.instance
-        .collection("users")
-        .doc(FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((snapshot) async {
-      if (snapshot.exists) {
-        setState(() {
-          userName = snapshot.data()!["userName"];
-          url = snapshot.data()!["userImage"];
-        });
-      }
-    });
-  }
-
   void initState() {
     super.initState();
-    _getDataFromDatabase();
+    getName(userName!);
+    getProfilePic(url!);
+  }
+
+  getName(String name) async {
+    final firebaseUser = await FirebaseAuth.instance.currentUser;
+    if (firebaseUser != null) {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(firebaseUser.email)
+          .get()
+          .then((table) {
+        return table.data()![name];
+      }).catchError((e) {
+        print(e);
+      });
+    }
+  }
+
+  getProfilePic(String profilePic) async {
+    final firebaseUser = await FirebaseAuth.instance.currentUser;
+    if (firebaseUser != null) {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(firebaseUser.email)
+          .get()
+          .then((table) {
+        return table.data()![profilePic];
+      }).catchError((e) {
+        print(e);
+      });
+    }
   }
 
   chooseImage() async {
@@ -54,31 +71,30 @@ class _ProfileState extends State<Profile> {
     setState(() {});
   }
 
+  updateProfile(BuildContext context) async {
+    Map<String, dynamic> map = Map();
+    if (file != null) {
+      String url = await uploadImage();
+      map['profilePic'] = url;
+    }
+    map['name'] = _textEditingController.text;
+
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(FirebaseAuth.instance.currentUser?.email)
+        .update(map);
+    Navigator.pop(context);
+  }
+
   Future<String> uploadImage() async {
     TaskSnapshot taskSnapshot = await FirebaseStorage.instance
         .ref()
         .child("profile")
-        .child(FirebaseAuth.instance.currentUser!.uid +
-            " _" +
-            basename(file!.path))
+        .child(
+            FirebaseAuth.instance.currentUser!.uid + "_" + basename(file!.path))
         .putFile(file!);
 
     return taskSnapshot.ref.getDownloadURL();
-  }
-
-  updateProfile(BuildContext context) async {
-    Map<String, dynamic> map = Map();
-    if (file != null) {
-      url = await uploadImage();
-      map["userImage"] = url;
-    }
-    map["userName"] = _textEditingController.text;
-
-    await FirebaseFirestore.instance
-        .collection("users")
-        .doc(FirebaseAuth.instance.currentUser!.uid)
-        .update(map);
-    Navigator.pop(context);
   }
 
   @override
@@ -115,7 +131,7 @@ class _ProfileState extends State<Profile> {
                   chooseImage();
                 },
                 child: CircleAvatar(
-                  backgroundColor: hexStringToColor("#E7F6F2"),
+                  backgroundColor: hexStringToColor("#395B64"),
                   radius: 100,
                   child: CircleAvatar(
                     radius: 95,
