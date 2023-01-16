@@ -155,7 +155,7 @@ class _ProfileState extends State<Profile> {
                       backgroundColor: hexStringToColor("#E7F6F2"),
                       foregroundColor: hexStringToColor("#2C3333")),
                   onPressed: () {
-                    Navigator.pushNamed(context, "/ForgotPassword");
+                    Navigator.pushNamed(context, "/ChangeEmail");
                   },
                   child: Text("Alterar e-mail", style: TextStyle(fontSize: 20)),
                 ),

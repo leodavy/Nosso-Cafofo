@@ -27,9 +27,9 @@ class _ChangeEmailState extends State<ChangeEmail> {
       color: hexStringToColor("#A5c9CA"),
       child: ListView(
         children: <Widget>[
-          imgWidget("assets/images/Icone.png", 180, 180),
+          imgWidget("assets/images/LOGOCAFOFONOME.png", 180, 180),
           SizedBox(height: 10),
-          Text("Insira o seu novo endereço de e-mail da sua conta",
+          Text("Insira o seu novo endereço de e-mail: ",
               style: TextStyle(
                   color: hexStringToColor("#252B2B"),
                   fontWeight: FontWeight.bold),

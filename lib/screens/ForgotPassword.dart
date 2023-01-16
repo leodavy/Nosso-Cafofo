@@ -26,7 +26,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       color: hexStringToColor("#A5c9CA"),
       child: ListView(
         children: <Widget>[
-          imgWidget("assets/images/Icone.png", 180, 180),
+          imgWidget("assets/images/LOGOCAFOFONOME.png", 180, 180),
           SizedBox(height: 10),
           Text(
               "Insira o e-mail da sua conta, nós enviaremos um link para alterar sua senha",
