@@ -9,7 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
 import 'package:nosso_cafofo/utils/externalAuth.dart';
+import 'package:nosso_cafofo/utils/userManagement.dart';
 import 'package:path/path.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 
 import '../utils/colors_util.dart';
 import 'Notifications.dart';
@@ -22,83 +27,58 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  String? url = " ";
-  String? userName = " ";
+  String profilePic = '';
+  String userName = '';
+
+  updateUserData() async {
+    final firebaseUser = await FirebaseAuth.instance.currentUser;
+    if (firebaseUser != null) {
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(firebaseUser.email)
+          .get()
+          .then((value) {
+        profilePic = value['profilePic'];
+        userName = value['name'];
+      });
+    }
+  }
+
+  uploadProfilePic() async {
+    final _firebaseStorage = FirebaseStorage.instance;
+    final _imagePicker = ImagePicker();
+    PickedFile image;
+
+    await Permission.photos.request();
+
+    if (await (Permission.photos.status).isGranted) {
+      image = (await _imagePicker.pickImage(source: ImageSource.gallery))
+          as PickedFile;
+
+      File? file = File(image.path);
+
+      if (image != null) {
+        final firebaseUser = await FirebaseAuth.instance.currentUser;
+        String userPkey = firebaseUser!.email.toString();
+        if (userPkey == null) {
+          return;
+        }
+        var snapshot = await _firebaseStorage
+            .ref()
+            .child("$userPkey/profilePic")
+            .putFile(file);
+        var downloadURL = await snapshot.ref.getDownloadURL();
+        userManagement().set('profilePic', downloadURL);
+      }
+    }
+  }
+
   File? file;
-
   TextEditingController _textEditingController = TextEditingController();
-
-  void initState() {
-    super.initState();
-    getName(userName!);
-    getProfilePic(url!);
-  }
-
-  getName(String name) async {
-    final firebaseUser = await FirebaseAuth.instance.currentUser;
-    if (firebaseUser != null) {
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(firebaseUser.email)
-          .get()
-          .then((table) {
-        return table.data()![name];
-      }).catchError((e) {
-        print(e);
-      });
-    }
-  }
-
-  getProfilePic(String profilePic) async {
-    final firebaseUser = await FirebaseAuth.instance.currentUser;
-    if (firebaseUser != null) {
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(firebaseUser.email)
-          .get()
-          .then((table) {
-        return table.data()![profilePic];
-      }).catchError((e) {
-        print(e);
-      });
-    }
-  }
-
-  chooseImage() async {
-    XFile? xfile = await ImagePicker().pickImage(source: ImageSource.gallery);
-    print("file " + xfile!.path);
-    file = File(xfile.path);
-    setState(() {});
-  }
-
-  updateProfile(BuildContext context) async {
-    Map<String, dynamic> map = Map();
-    if (file != null) {
-      String url = await uploadImage();
-      map['profilePic'] = url;
-    }
-    map['name'] = _textEditingController.text;
-
-    await FirebaseFirestore.instance
-        .collection("users")
-        .doc(FirebaseAuth.instance.currentUser?.email)
-        .update(map);
-    Navigator.pop(context);
-  }
-
-  Future<String> uploadImage() async {
-    TaskSnapshot taskSnapshot = await FirebaseStorage.instance
-        .ref()
-        .child("profile")
-        .child(
-            FirebaseAuth.instance.currentUser!.uid + "_" + basename(file!.path))
-        .putFile(file!);
-
-    return taskSnapshot.ref.getDownloadURL();
-  }
 
   @override
   Widget build(BuildContext context) {
+    updateUserData();
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
         body: Center(
@@ -128,16 +108,15 @@ class _ProfileState extends State<Profile> {
               ),
               GestureDetector(
                 onTap: () {
-                  chooseImage();
+                  uploadProfilePic();
                 },
                 child: CircleAvatar(
                   backgroundColor: hexStringToColor("#395B64"),
                   radius: 100,
                   child: CircleAvatar(
                     radius: 95,
-                    backgroundImage: file == null
-                        ? NetworkImage(url!)
-                        : Image.file(file!).image,
+                    backgroundImage:
+                        profilePic != '' ? NetworkImage(profilePic) : null,
                   ),
                 ),
               ),
@@ -191,7 +170,8 @@ class _ProfileState extends State<Profile> {
                       backgroundColor: hexStringToColor("#E7F6F2"),
                       foregroundColor: hexStringToColor("#2C3333")),
                   onPressed: () {
-                    updateProfile(context);
+                    userManagement().set('name', _textEditingController.text);
+                    updateUserData();
                   },
                   child:
                       Text("Salvar alterações", style: TextStyle(fontSize: 20)),
