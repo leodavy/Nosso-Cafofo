@@ -29,16 +29,25 @@ class userManagement {
 
   get(String field) async {
     final firebaseUser = await FirebaseAuth.instance.currentUser;
+    var dataToRecive;
     if (firebaseUser != null) {
-      await FirebaseFirestore.instance
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(firebaseUser.email.toString())
+          .get()
+          .then((value) {
+        dataToRecive = value[field];
+      });
+      return dataToRecive.toString();
+      /*await FirebaseFirestore.instance
           .collection('users')
           .doc(firebaseUser.email)
           .get()
           .then((table) {
-        return table.data()![field];
+        return table.data()![field].toString();
       }).catchError((e) {
         print(e);
-      });
+      });*/
     }
   }
 
@@ -48,34 +57,9 @@ class userManagement {
       await FirebaseFirestore.instance
           .collection('users')
           .doc(firebaseUser.email)
-          .set({field: value}).catchError((e) {
+          .update({field: value}).catchError((e) {
         print(e);
       });
-    }
-  }
-
-  uploadProfilePic() async {
-    final _firebaseStorage = FirebaseStorage.instance;
-    final _imagePicker = ImagePicker();
-    PickedFile image;
-
-    await Permission.photos.request();
-
-    if (await (Permission.photos.status).isGranted) {
-      image = (await _imagePicker.pickImage(source: ImageSource.gallery))
-          as PickedFile;
-
-      File? file = File(image.path);
-
-      if (image != null) {
-        String userPkey = get('email');
-        var snapshot = await _firebaseStorage
-            .ref()
-            .child("$userPkey/profilePic")
-            .putFile(file);
-        var downloadURL = await snapshot.ref.getDownloadURL();
-        set('profilePic', downloadURL);
-      }
     }
   }
 }
