@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:nosso_cafofo/utils/userManagement.dart';
+import 'package:nosso_cafofo/utils/UserManagement.dart';
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
@@ -52,7 +52,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: ElevatedButton(
                 onPressed: () {
-                  userManagement().set('email', _emailTextController.text);
+                  UserManagement().set('email', _emailTextController.text);
                   FirebaseAuth.instance.currentUser
                       ?.updateEmail(_emailTextController.text);
                 },

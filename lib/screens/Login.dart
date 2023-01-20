@@ -7,7 +7,7 @@ import 'package:nosso_cafofo/screens/ForgotPassword.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:nosso_cafofo/utils/externalAuth.dart';
-import 'package:nosso_cafofo/utils/userManagement.dart';
+import 'package:nosso_cafofo/utils/UserManagement.dart';
 
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
@@ -83,7 +83,7 @@ class _LoginState extends State<Login> {
                       .doc(FirebaseAuth.instance.currentUser?.email)
                       .get())
                   .exists) {
-                userManagement().storeNewUser(
+                UserManagement().storeNewUser(
                     FirebaseAuth.instance.currentUser,
                     FirebaseAuth.instance.currentUser?.displayName,
                     FirebaseAuth.instance.currentUser?.photoURL,

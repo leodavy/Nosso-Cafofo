@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/utils/colors_util.dart';
 import '../utils/widgets_util.dart';
-import '../utils/userManagement.dart';
+import '../utils/UserManagement.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -76,7 +76,7 @@ class _RegisterState extends State<Register> {
                         password: _passwordTextController.text)
                     .then((value) {
                   print("Created new acount");
-                  userManagement().storeNewUser(
+                  UserManagement().storeNewUser(
                       value.user, _nameTextController.text, null, context);
                 }).onError((error, stackTrace) {
                   print("Error ${error.toString()}");

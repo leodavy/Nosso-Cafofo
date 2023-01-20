@@ -8,7 +8,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:nosso_cafofo/screens/Cafofo.dart';
+import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/utils/externalAuth.dart';
+import 'package:nosso_cafofo/utils/UserManagement.dart';
 import 'package:path/path.dart';
 
 import '../utils/colors_util.dart';
@@ -28,39 +30,18 @@ class _ProfileState extends State<Profile> {
 
   TextEditingController _textEditingController = TextEditingController();
 
-  void initState() {
-    super.initState();
-    getName(userName!);
-    getProfilePic(url!);
-  }
-
-  getName(String name) async {
-    final firebaseUser = await FirebaseAuth.instance.currentUser;
-    if (firebaseUser != null) {
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(firebaseUser.email)
-          .get()
-          .then((table) {
-        return table.data()![name];
-      }).catchError((e) {
-        print(e);
-      });
-    }
-  }
-
   getProfilePic(String profilePic) async {
     final firebaseUser = await FirebaseAuth.instance.currentUser;
+    var dataToRecive;
     if (firebaseUser != null) {
-      await FirebaseFirestore.instance
+      FirebaseFirestore.instance
           .collection('users')
-          .doc(firebaseUser.email)
+          .doc(firebaseUser.email.toString())
           .get()
-          .then((table) {
-        return table.data()![profilePic];
-      }).catchError((e) {
-        print(e);
+          .then((value) {
+        dataToRecive = value[profilePic];
       });
+      return dataToRecive.toString();
     }
   }
 
@@ -102,9 +83,9 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
               SizedBox(
                 height: 20,
               ),
@@ -197,28 +178,27 @@ class _ProfileState extends State<Profile> {
                       Text("Salvar alterações", style: TextStyle(fontSize: 20)),
                 ),
               ),
+              SizedBox(height: 10),
               Container(
-                  height: MediaQuery.of(context).size.height / 30,
-                  width: MediaQuery.of(context).size.width / 3,
-                  child: TextButton(
-                    onPressed: () {
-                      FirebaseAuth.instance.signOut().then((value) {
-                        print("Signed out");
-                        Navigator.restorablePushNamed(context, "/login");
-                      });
-                    },
-                    style: TextButton.styleFrom(
-                      alignment: Alignment.center,
-                    ),
-                    child: Text("Desconectar",
-                        style: TextStyle(
-                            color: hexStringToColor("#2C3333"),
-                            decoration: TextDecoration.underline,
-                            fontSize: 15)),
-                  )),
-            ],
-          ),
-        ));
+                height: MediaQuery.of(context).size.height / 30,
+                width: MediaQuery.of(context).size.width / 3,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                      backgroundColor: hexStringToColor("#E7F6F2"),
+                      foregroundColor: hexStringToColor("#2C3333")),
+                  onPressed: () {
+                    FirebaseAuth.instance.signOut().then((value) {
+                      print("Signed out");
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Login()));
+                    });
+                  },
+                  child: Text("Desconectar", style: TextStyle(fontSize: 15)),
+                ),
+              ),
+            ])));
   }
 }
 

@@ -8,7 +8,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import '../screens/Profile.dart';
 
-class userManagement {
+class UserManagement {
   storeNewUser(user, userName, profilePic, context) async {
     var firebaseUser = await FirebaseAuth.instance.currentUser;
 
