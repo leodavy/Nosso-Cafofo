@@ -13,6 +13,15 @@ Image imgWidget(String imagePath, double width, double height) {
   );
 }
 
+Image imgLinkWidget(String imageLink, double width, double height) {
+  return Image.network(
+    imageLink,
+    fit: BoxFit.contain,
+    width: width,
+    height: height,
+  );
+}
+
 TextField reusableTextField(String text, /*IconData icon,*/ bool isPassword,
     TextEditingController controller) {
   return TextField(
