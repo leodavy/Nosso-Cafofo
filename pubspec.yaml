@@ -29,7 +29,6 @@ dependencies:
   image_picker: ^0.8.6
   path: ^1.8.2
   file_picker: ^5.2.5
-  firebase_messaging: ^14.2.1
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +58,7 @@ flutter:
     - assets/images/Login/googleicon.png
     - assets/images/Login/facebook.png
     - assets/images/Login/twittericon.png
+    - assets/images/Profile/default_user.jpg
   #add Splash screen Image
   
 
