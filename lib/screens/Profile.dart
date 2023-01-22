@@ -75,7 +75,6 @@ class _ProfileState extends State<Profile> {
         .then((value) {
       this.url = value['profilePic'];
       this.userName = value['name'];
-      print(this.url);
       setState(() {});
     });
   }
@@ -87,9 +86,6 @@ class _ProfileState extends State<Profile> {
       firstTry = false;
     }
 
-    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-    print(this.url);
-    print(this.userName);
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
         body: Center(
@@ -110,7 +106,7 @@ class _ProfileState extends State<Profile> {
                     textAlign: TextAlign.center,
                     controller: _textEditingController,
                     decoration: InputDecoration(
-                        hintText: "Alterar Nome",
+                        hintText: userName,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25))),
                   )),
