@@ -11,6 +11,7 @@ import 'package:nosso_cafofo/screens/Cafofo.dart';
 import 'package:nosso_cafofo/screens/Login.dart';
 import 'package:nosso_cafofo/utils/externalAuth.dart';
 import 'package:nosso_cafofo/utils/UserManagement.dart';
+import 'package:nosso_cafofo/utils/widgets_util.dart';
 import 'package:path/path.dart';
 
 import '../utils/colors_util.dart';
@@ -24,62 +25,71 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  String? url = " ";
-  String? userName = " ";
+  bool firstTry = true;
+  var user = FirebaseAuth.instance.currentUser;
+  String url = "";
+  String userName = "";
   File? file;
 
   TextEditingController _textEditingController = TextEditingController();
-
-  getProfilePic(String profilePic) async {
-    final firebaseUser = await FirebaseAuth.instance.currentUser;
-    var dataToRecive;
-    if (firebaseUser != null) {
-      FirebaseFirestore.instance
-          .collection('users')
-          .doc(firebaseUser.email.toString())
-          .get()
-          .then((value) {
-        dataToRecive = value[profilePic];
-      });
-      return dataToRecive.toString();
-    }
-  }
 
   chooseImage() async {
     XFile? xfile = await ImagePicker().pickImage(source: ImageSource.gallery);
     print("file " + xfile!.path);
     file = File(xfile.path);
-    setState(() {});
   }
 
   updateProfile(BuildContext context) async {
     Map<String, dynamic> map = Map();
     if (file != null) {
-      String url = await uploadImage();
+      this.url = await uploadImage();
       map['profilePic'] = url;
     }
-    map['name'] = _textEditingController.text;
+    if (_textEditingController.text != '') {
+      map['name'] = _textEditingController.text;
+      get();
+    }
 
     await FirebaseFirestore.instance
         .collection("users")
         .doc(FirebaseAuth.instance.currentUser?.email)
         .update(map);
-    Navigator.pop(context);
+    get();
   }
 
   Future<String> uploadImage() async {
     TaskSnapshot taskSnapshot = await FirebaseStorage.instance
         .ref()
-        .child("profile")
-        .child(
-            FirebaseAuth.instance.currentUser!.uid + "_" + basename(file!.path))
+        .child("${user?.email.toString()}")
+        .child("profilePic")
         .putFile(file!);
 
     return taskSnapshot.ref.getDownloadURL();
   }
 
+  get() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(user!.email.toString())
+        .get()
+        .then((value) {
+      this.url = value['profilePic'];
+      this.userName = value['name'];
+      print(this.url);
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (url == "" && firstTry) {
+      get();
+      firstTry = false;
+    }
+
+    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    print(this.url);
+    print(this.userName);
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
         body: Center(
@@ -116,9 +126,17 @@ class _ProfileState extends State<Profile> {
                   radius: 100,
                   child: CircleAvatar(
                     radius: 95,
-                    backgroundImage: file == null
-                        ? NetworkImage(url!)
-                        : Image.file(file!).image,
+                    backgroundImage: url != ''
+                        ? imgLinkWidget(
+                                url,
+                                MediaQuery.of(context).size.width * 0.15,
+                                MediaQuery.of(context).size.width * 0.15)
+                            .image
+                        : imgWidget(
+                                "assets/images/LOGOCAFOFONOME.png",
+                                MediaQuery.of(context).size.width * 0.15,
+                                MediaQuery.of(context).size.width * 0.15)
+                            .image,
                   ),
                 ),
               ),
@@ -173,6 +191,7 @@ class _ProfileState extends State<Profile> {
                       foregroundColor: hexStringToColor("#2C3333")),
                   onPressed: () {
                     updateProfile(context);
+                    setState(() {});
                   },
                   child:
                       Text("Salvar alterações", style: TextStyle(fontSize: 20)),
