@@ -58,9 +58,20 @@ class _CafofoState extends State<Cafofo> {
           body: Center(
               child: Wrap(
             crossAxisAlignment: WrapCrossAlignment.center,
-            spacing: 32,
-            runSpacing: 20,
+            alignment: WrapAlignment.spaceEvenly,
+            spacing: 1,
+            runSpacing: 15,
             children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: hexStringToColor("#E7F6F2")),
+                child: Text("Código do cafofo: \n${this.cafofoPkey}",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 25)),
+                height: MediaQuery.of(context).size.height / 14,
+                width: MediaQuery.of(context).size.width / 1.2,
+              ),
               Container(
                 height: MediaQuery.of(context).size.height / 6,
                 width: MediaQuery.of(context).size.width / 3,
