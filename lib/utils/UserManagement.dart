@@ -15,10 +15,11 @@ class UserManagement {
     FirebaseFirestore.instance
         .collection('users')
         .doc(firebaseUser?.email)
-        .set({
+        .set(<String, dynamic>{
           'email': user.email,
           'name': userName,
-          'profilePic': profilePic ?? ''
+          'profilePic': profilePic ?? '',
+          'cafofo': ''
         })
         .then((value) => Navigator.push(
             context, MaterialPageRoute(builder: (context) => Profile())))
@@ -39,15 +40,6 @@ class UserManagement {
         dataToRecive = value[field];
       });
       return dataToRecive.toString();
-      /*await FirebaseFirestore.instance
-          .collection('users')
-          .doc(firebaseUser.email)
-          .get()
-          .then((table) {
-        return table.data()![field].toString();
-      }).catchError((e) {
-        print(e);
-      });*/
     }
   }
 
