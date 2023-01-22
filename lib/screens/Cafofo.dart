@@ -176,12 +176,11 @@ class _CafofoState extends State<Cafofo> {
                               .collection('cafofos')
                               .doc(cafofoPkey)
                               .set(<String, dynamic>{
-                            'admin': user!.email,
-                            'members': [],
-                            'finances': [],
-                            'shopping': [],
-                            'tasks': [],
-                            'notifications': []
+                            'members': [user!.email],
+                            'finances': [''],
+                            'shopping': [''],
+                            'tasks': [''],
+                            'notifications': ['']
                           });
                           get();
                           setState(() {});
