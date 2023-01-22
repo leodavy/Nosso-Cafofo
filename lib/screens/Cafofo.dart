@@ -66,7 +66,7 @@ class _CafofoState extends State<Cafofo> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: hexStringToColor("#E7F6F2")),
-                child: Text("Código do cafofo: \n${this.cafofoPkey}",
+                child: Text("Código do cafofo: \n${this.cafofoPkey.toString()}",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 25)),
                 height: MediaQuery.of(context).size.height / 14,

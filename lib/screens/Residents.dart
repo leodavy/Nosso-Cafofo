@@ -28,7 +28,8 @@ class Residents extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
+        body: Center(
+            child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -81,25 +82,7 @@ class Residents extends StatelessWidget {
                   ],
                 )),
             SizedBox(height: 25),
-            Container(
-              height: MediaQuery.of(context).size.height / 14,
-              width: MediaQuery.of(context).size.width / 1.4,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                color: hexStringToColor("#E7F6F2"),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(width: 20),
-                  TextButton(
-                    onPressed: null,
-                    child: Text("Adicionar morador  +"),
-                  )
-                ],
-              ),
-            )
           ],
-        ));
+        )));
   }
 }

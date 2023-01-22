@@ -86,8 +86,24 @@ class _ProfileState extends State<Profile> {
       firstTry = false;
     }
 
+    bool textcenter = true;
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
+        appBar: PreferredSize(
+            preferredSize: AppBar().preferredSize,
+            child: SafeArea(
+                child: Container(
+                    child: AppBar(
+                        automaticallyImplyLeading: false,
+                        title: Text("Perfil",
+                            style:
+                                TextStyle(color: hexStringToColor("#2C3333"))),
+                        centerTitle: textcenter,
+                        backgroundColor: hexStringToColor("#E7F6F2"),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(25.0),
+                                bottomRight: Radius.circular(25.0))))))),
         body: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -100,13 +116,15 @@ class _ProfileState extends State<Profile> {
                   width: MediaQuery.of(context).size.width / 1.9,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: hexStringToColor("#E7F6F2")),
+                      color: hexStringToColor("#395B64")),
                   child: TextField(
                     selectionWidthStyle: BoxWidthStyle.tight,
                     textAlign: TextAlign.center,
                     controller: _textEditingController,
                     decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.white),
                         hintText: userName,
+                        labelStyle: TextStyle(color: Colors.white),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25))),
                   )),
@@ -118,7 +136,7 @@ class _ProfileState extends State<Profile> {
                   chooseImage();
                 },
                 child: CircleAvatar(
-                  backgroundColor: hexStringToColor("#395B64"),
+                  backgroundColor: Colors.grey[700],
                   radius: 100,
                   child: CircleAvatar(
                     radius: 95,
@@ -129,7 +147,7 @@ class _ProfileState extends State<Profile> {
                                 MediaQuery.of(context).size.width * 0.15)
                             .image
                         : imgWidget(
-                                "assets/images/LOGOCAFOFONOME.png",
+                                "assets/images/WithoutProfilePic.png",
                                 MediaQuery.of(context).size.width * 0.15,
                                 MediaQuery.of(context).size.width * 0.15)
                             .image,
@@ -147,8 +165,8 @@ class _ProfileState extends State<Profile> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: hexStringToColor("#E7F6F2"),
-                      foregroundColor: hexStringToColor("#2C3333")),
+                      backgroundColor: hexStringToColor("#395B64"),
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     Navigator.pushNamed(context, "/ChangeEmail");
                   },
@@ -165,8 +183,8 @@ class _ProfileState extends State<Profile> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: hexStringToColor("#E7F6F2"),
-                      foregroundColor: hexStringToColor("#2C3333")),
+                      backgroundColor: hexStringToColor("#395B64"),
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     Navigator.pushNamed(context, "/ForgotPassword");
                   },
@@ -183,8 +201,8 @@ class _ProfileState extends State<Profile> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: hexStringToColor("#E7F6F2"),
-                      foregroundColor: hexStringToColor("#2C3333")),
+                      backgroundColor: hexStringToColor("#395B64"),
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     updateProfile(context);
                     setState(() {});
@@ -201,8 +219,8 @@ class _ProfileState extends State<Profile> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: hexStringToColor("#E7F6F2"),
-                      foregroundColor: hexStringToColor("#2C3333")),
+                      backgroundColor: hexStringToColor("#395B64"),
+                      foregroundColor: Colors.white),
                   onPressed: () {
                     FirebaseAuth.instance.signOut().then((value) {
                       print("Signed out");
