@@ -33,7 +33,6 @@ class _NotificationsState extends State<Notifications> {
         .doc(cafofoPkey.toString())
         .get()
         .then((value) {
-      print(List.from(value['notifications'])[0]);
       this.notifications = List.from(value['notifications']);
     });
     setState(() {});
@@ -113,7 +112,7 @@ class _NotificationsState extends State<Notifications> {
 ListView getWidgets(var context, var itens) {
   final children = <Widget>[];
   if (itens != null) {
-    for (var i = 0; i < itens.length; i++) {
+    for (var i = itens.length; i > 0; i--) {
       if (itens[i] == '') continue;
       children.add(SizedBox(
         height: MediaQuery.of(context).size.height * 0.01,
