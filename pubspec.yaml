@@ -59,7 +59,6 @@ flutter:
     - assets/images/Login/googleicon.png
     - assets/images/Login/facebook.png
     - assets/images/Login/twittericon.png
-    - assets/images/Profile/default_user.jpg
   #add Splash screen Image
   
 

@@ -108,11 +108,8 @@ class _ProfileState extends State<Profile> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-              SizedBox(
-                height: 20,
-              ),
               Container(
-                  height: MediaQuery.of(context).size.height / 20,
+                  height: MediaQuery.of(context).size.height / 25,
                   width: MediaQuery.of(context).size.width / 1.9,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),

@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors_util.dart';
@@ -10,17 +12,31 @@ class Finances extends StatefulWidget {
 }
 
 class _FinancesState extends State<Finances> {
-  final _items = [];
+  var user = FirebaseAuth.instance.currentUser;
+  String cafofoPkey = " ";
+
+  final bool textcenter = true;
   final GlobalKey<AnimatedListState> _key = GlobalKey();
+  final TextEditingController _controller = TextEditingController();
+  List items = [];
+
   @override
   Widget build(BuildContext context) {
-    final bool textcenter = true;
-    final GlobalKey<AnimatedListState> _key = GlobalKey();
-    final TextEditingController _controller = TextEditingController();
-
     void _addItem(String title) {
-      _items.insert(0, title);
+      items.insert(0, title);
       _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
+    }
+
+    void _removeItem(int index) {
+      _key.currentState!.removeItem(index, (_, animation) {
+        return Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
+            child: SizeTransition(
+              sizeFactor: animation,
+            ));
+      }, duration: const Duration(seconds: 1));
+
+      items.removeAt(index);
     }
 
     Future<void> addDialog(BuildContext context) {
@@ -53,18 +69,6 @@ class _FinancesState extends State<Finances> {
           }));
     }
 
-    void _removeItem(int index) {
-      _key.currentState!.removeItem(index, (_, animation) {
-        return Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
-            child: SizeTransition(
-              sizeFactor: animation,
-            ));
-      }, duration: const Duration(seconds: 1));
-
-      _items.removeAt(index);
-    }
-
     return Scaffold(
       backgroundColor: hexStringToColor("#A5c9CA"),
       appBar: PreferredSize(
@@ -95,7 +99,7 @@ class _FinancesState extends State<Finances> {
             child: ListTile(
               contentPadding: const EdgeInsets.all(15),
               title: Text(
-                _items[index],
+                items[index],
                 style: TextStyle(fontSize: 24, color: Colors.black),
               ),
               trailing: IconButton(
