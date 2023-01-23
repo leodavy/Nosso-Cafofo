@@ -14,7 +14,7 @@ class _NotificationsState extends State<Notifications> {
   var user = FirebaseAuth.instance.currentUser;
   var userDoc = FirebaseFirestore.instance
       .collection(FirebaseAuth.instance.currentUser!.email.toString());
-  var cafofoPkey;
+  String cafofoPkey = '';
   List<String> notifications = [''];
   bool first = true;
 
@@ -25,16 +25,15 @@ class _NotificationsState extends State<Notifications> {
         .get()
         .then((value) {
       this.cafofoPkey = value['cafofo'];
-      print(this.cafofoPkey);
+      FirebaseFirestore.instance
+          .collection('cafofos')
+          .doc(value['cafofo'].toString())
+          .get()
+          .then((data) {
+        this.notifications = List.from(data['notifications']);
+      });
     });
 
-    FirebaseFirestore.instance
-        .collection('cafofos')
-        .doc(cafofoPkey.toString())
-        .get()
-        .then((value) {
-      this.notifications = List.from(value['notifications']);
-    });
     setState(() {});
   }
 
@@ -112,7 +111,7 @@ class _NotificationsState extends State<Notifications> {
 ListView getWidgets(var context, var itens) {
   final children = <Widget>[];
   if (itens != null) {
-    for (var i = itens.length; i > 0; i--) {
+    for (int i = itens.length - 1; i > -1; i--) {
       if (itens[i] == '') continue;
       children.add(SizedBox(
         height: MediaQuery.of(context).size.height * 0.01,
