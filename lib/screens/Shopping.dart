@@ -12,12 +12,12 @@ class Shopping extends StatefulWidget {
 
 class _ShoppingState extends State<Shopping> {
   final _items = [];
-  final GlobalKey<AnimatedListState> _key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     final bool textcenter = true;
     final GlobalKey<AnimatedListState> _key = GlobalKey();
     final TextEditingController _controller = TextEditingController();
+    final TextEditingController _qtdcontroller = TextEditingController();
 
     void _addItem(String title) {
       _items.insert(0, title);
@@ -31,15 +31,27 @@ class _ShoppingState extends State<Shopping> {
             return AlertDialog(
               backgroundColor: hexStringToColor("#E7F6F2"),
               title: const Text(
-                'Adicione um item à lista:',
+                'Adicione um item a lista:',
               ),
-              content: TextField(
-                cursorColor: hexStringToColor("#2C3333"),
-                controller: _controller,
-                decoration: const InputDecoration(
-                  hintText: '',
+              content:
+                  Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                TextField(
+                  cursorColor: hexStringToColor("#2C3333"),
+                  controller: _controller,
+                  decoration: const InputDecoration(
+                    hintText: '',
+                  ),
                 ),
-              ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                Text(" Quantidade: "),
+                TextField(
+                  cursorColor: hexStringToColor("#2C3333"),
+                  controller: _qtdcontroller,
+                  decoration: const InputDecoration(
+                    hintText: '',
+                  ),
+                )
+              ]),
               actions: [
                 TextButton(
                   onPressed: () {
@@ -89,6 +101,7 @@ class _ShoppingState extends State<Shopping> {
         key: _key,
         itemBuilder: (context, index, animation) {
           return Container(
+            height: MediaQuery.of(context).size.height * 0.15,
             alignment: Alignment.topCenter,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
