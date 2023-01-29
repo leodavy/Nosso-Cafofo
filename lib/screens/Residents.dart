@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/utils/widgets_util.dart';
-import 'package:path/path.dart';
-
 import '../utils/colors_util.dart';
 
 class Residents extends StatefulWidget {
@@ -24,11 +22,11 @@ class _ResidentState extends State<Residents> {
         .collection('users')
         .doc(user!.email.toString())
         .get()
-        .then((value) {
+        .then((value) async {
       this.cafofoPkey = value['cafofo'];
-      FirebaseFirestore.instance
+      await FirebaseFirestore.instance
           .collection('cafofos')
-          .doc(value['cafofo'].toString())
+          .doc(value['cafofo'])
           .get()
           .then((data) {
         this.residents = List.from(data['members']);
@@ -74,7 +72,7 @@ class _ResidentState extends State<Residents> {
                     case ConnectionState.none:
                       return new ListView();
                     case ConnectionState.waiting:
-                      return new ListView(children: [
+                      return new ListView(children: [SizedBox(height: MediaQuery.of(context).size.height*0.01),
                         Center(
                             child: Container(
                           width: MediaQuery.of(context).size.width * 0.75,
@@ -132,7 +130,7 @@ Future<ListView> getWidgets(var context, var members) async {
     children.add(SizedBox(
       height: MediaQuery.of(context).size.height * 0.01,
     ));
-    children.add(await generateWidget(context, members[i].toString()));
+    children.add(await generateWidget(context, members[i]));
   }
   return new ListView(
     padding: EdgeInsets.fromLTRB(
@@ -175,13 +173,15 @@ Future<Container> generateWidget(var context, String userPkey) async {
 
 Future<Image> getProfilePic(var context, String userPkey) async {
   String url = "";
-  await FirebaseFirestore.instance
-      .collection('users')
-      .doc(userPkey)
-      .get()
-      .then((value) {
-    url = value['profilePic'];
-  });
+  try {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(userPkey)
+        .get()
+        .then((value) {
+      url = value['profilePic'];
+    });
+  }catch(error){}
   return url != ""
       ? imgLinkWidget(url, MediaQuery.of(context).size.width,
           MediaQuery.of(context).size.width)
@@ -191,12 +191,14 @@ Future<Image> getProfilePic(var context, String userPkey) async {
 
 Future<String> getUserName(String userPkey) async {
   String userName = "";
-  await FirebaseFirestore.instance
-      .collection('users')
-      .doc(userPkey)
-      .get()
-      .then((value) {
-    userName = value['name'];
-  });
+  try{
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(userPkey)
+        .get()
+        .then((value) {
+      userName = value['name'];
+    });
+  }catch(error){}
   return userName;
 }

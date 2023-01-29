@@ -1,9 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:nosso_cafofo/screens/Profile.dart';
 import 'package:nosso_cafofo/utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 import '../utils/UserManagement.dart';
@@ -79,6 +76,11 @@ class _RegisterState extends State<Register> {
                   UserManagement().storeNewUser(
                       value.user, _nameTextController.text, null, context);
                 }).onError((error, stackTrace) {
+                  if(error.toString() == '[firebase_auth/weak-password] Password should be at least 6 characters'){
+                    _incorrectPassword = invalidPassword();
+                    setState(() {
+                    });
+                  }
                   print("Error ${error.toString()}");
                 });
               } else {
@@ -95,6 +97,13 @@ class _RegisterState extends State<Register> {
   Text incorrectPassword() {
     return Text(
       "Senhas não coincidem",
+      style: TextStyle(color: hexStringToColor("#2c3333")),
+    );
+  }
+
+  Text invalidPassword(){
+    return Text(
+      "Senha deve possuir no mínimo, 6 caracteres",
       style: TextStyle(color: hexStringToColor("#2c3333")),
     );
   }

@@ -129,18 +129,25 @@ class _CafofoState extends State<Cafofo> {
                 ),
               ),
               Container(
-                  height: MediaQuery.of(context).size.height / 8,
-                  width: MediaQuery.of(context).size.width / 2,
+                  height: MediaQuery.of(context).size.height * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.50,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)
+                      ,color: hexStringToColor('#E7F6F2')),
                   child: TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, "/Residents");
+                      onPressed: () async{
+                        var userDoc = await FirebaseFirestore.instance.collection('users').doc(user!.email);
+                        await userDoc.get().then((value) async {
+                          await FirebaseFirestore.instance.collection('cafofos').doc(value['cafofo']).update({'members' : FieldValue.arrayRemove([user!.email])});
+                        });
+                        await userDoc.update({'cafofo': ''});
+                        get();
+                        setState(() {});
                       },
                       child: Text(
                         "Sair do cafofo",
                         style: TextStyle(
                             fontSize: 20,
-                            color: Colors.black,
-                            decoration: TextDecoration.underline),
+                            color: Colors.black),
                       )))
             ],
           )));
@@ -191,10 +198,10 @@ class _CafofoState extends State<Cafofo> {
                               .doc(cafofoPkey)
                               .set(<String, dynamic>{
                             'members': [user!.email],
-                            'finances': [''],
-                            'shopping': [''],
-                            'tasks': [''],
-                            'notifications': ['']
+                            'finances': [],
+                            'shopping': [],
+                            'tasks': [],
+                            'notifications': []
                           });
                           get();
                           setState(() {});
@@ -255,8 +262,7 @@ class _CafofoState extends State<Cafofo> {
                               .collection('cafofos')
                               .doc(_cafofoTextController.text);
                           if ((await cafofo.get()).exists) {
-                            cafofo.set({'members': user!.email},
-                                SetOptions(merge: true));
+                            cafofo.update({'members': FieldValue.arrayUnion([user!.email])});
                             UserManagement()
                                 .set('cafofo', _cafofoTextController.text);
                             get();
