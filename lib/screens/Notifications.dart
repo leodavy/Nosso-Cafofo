@@ -39,12 +39,9 @@ class _NotificationsState extends State<Notifications> {
 
   @override
   Widget build(BuildContext context) {
-    if (first) {
       get();
-      first = false;
       setState(() {});
-    }
-    if (this.cafofoPkey != '') {
+      if (this.cafofoPkey != '') {
       return Scaffold(
           appBar: PreferredSize(
               preferredSize: AppBar().preferredSize,
@@ -121,9 +118,9 @@ ListView getWidgets(var context, var itens) {
   }
   return new ListView(
     padding: EdgeInsets.fromLTRB(
-        MediaQuery.of(context).size.width * (0.15 / 2),
+        MediaQuery.of(context).size.width * (0.05),
         MediaQuery.of(context).size.width * 0.01,
-        MediaQuery.of(context).size.width * (0.15 / 2),
+        MediaQuery.of(context).size.width * (0.05),
         MediaQuery.of(context).size.width * 0.01),
     children: children,
   );
@@ -141,8 +138,7 @@ Container generateWidget(var context, String content) {
         child: Text(content,
             style: TextStyle(
                 fontSize: MediaQuery.of(context).size.height * 0.02,
-                color: hexStringToColor("#252B2B"),
-                fontWeight: FontWeight.bold),
+                color: hexStringToColor("#252B2B")),
             textAlign: TextAlign.center)),
   );
 }
