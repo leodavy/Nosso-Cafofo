@@ -19,9 +19,8 @@ class _ResidentState extends State<Residents> {
   var cafofoPkey;
   List<String> residents = [''];
   bool first = true;
-
-  get() {
-    FirebaseFirestore.instance
+  get() async {
+    await FirebaseFirestore.instance
         .collection('users')
         .doc(user!.email.toString())
         .get()
@@ -39,17 +38,15 @@ class _ResidentState extends State<Residents> {
     setState(() {});
   }
 
-  test() {
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
-    if (first) {
+    if (this.residents[0] == '') {
       get();
-      first = false;
+      getWidgets(context, this.residents);
       setState(() {});
     }
+
+    setState(() {});
     return Scaffold(
         backgroundColor: hexStringToColor("#A5c9CA"),
         appBar: PreferredSize(
@@ -70,31 +67,86 @@ class _ResidentState extends State<Residents> {
           ),
         ),
         body: Center(
-            child: getWidgets(context, this.residents, () {
-          setState(() {});
-        })));
+            child: FutureBuilder(
+                future: getWidgets(context, this.residents),
+                builder: (context, snapshot) {
+                  switch (snapshot.connectionState) {
+                    case ConnectionState.none:
+                      return new ListView();
+                    case ConnectionState.waiting:
+                      return new ListView(children: [
+                        Center(
+                            child: Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          height: MediaQuery.of(context).size.height * 0.08,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                  MediaQuery.of(context).size.height *
+                                      (0.08 / 3))),
+                              color: hexStringToColor("#E7F6F2")),
+                          child: Center(
+                              child: Text("Carregando...",
+                                  style: TextStyle(
+                                      fontSize:
+                                          MediaQuery.of(context).size.height *
+                                              0.02,
+                                      color: hexStringToColor("#252B2B"),
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center)),
+                        ))
+                      ]);
+                    case ConnectionState.active:
+                      return new ListView(children: [
+                        Center(
+                            child: Container(
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          height: MediaQuery.of(context).size.height * 0.08,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(
+                                  MediaQuery.of(context).size.height *
+                                      (0.08 / 3))),
+                              color: hexStringToColor("#E7F6F2")),
+                          child: Center(
+                              child: Text("Carregando...",
+                                  style: TextStyle(
+                                      fontSize:
+                                          MediaQuery.of(context).size.height *
+                                              0.02,
+                                      color: hexStringToColor("#252B2B"),
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center)),
+                        ))
+                      ]);
+                    case ConnectionState.done:
+                      return snapshot.hasData ? snapshot.data! : new ListView();
+                    default:
+                      return new ListView();
+                  }
+                })));
   }
 }
 
-ListView getWidgets(var context, var members, Function setState) {
+Future<ListView> getWidgets(var context, var members) async {
   final children = <Widget>[];
   for (int i = 0; i < members.length; i++) {
     children.add(SizedBox(
       height: MediaQuery.of(context).size.height * 0.01,
     ));
-    children.add(generateWidget(context, members[i].toString(), setState));
+    children.add(await generateWidget(context, members[i].toString()));
   }
   return new ListView(
     padding: EdgeInsets.fromLTRB(
         MediaQuery.of(context).size.width * (0.15 / 2),
-        MediaQuery.of(context).size.width * 0.01,
+        MediaQuery.of(context).size.width * 0.03,
         MediaQuery.of(context).size.width * (0.15 / 2),
-        MediaQuery.of(context).size.width * 0.01),
+        MediaQuery.of(context).size.width * 0.03),
     children: children,
   );
 }
 
-Container generateWidget(var context, String userPkey, Function setState) {
+Future<Container> generateWidget(var context, String userPkey) async {
+  Image profilePic = await getProfilePic(context, userPkey);
+  String username = await getUserName(userPkey);
   return new Container(
     width: MediaQuery.of(context).size.width * 0.75,
     height: MediaQuery.of(context).size.height * 0.08,
@@ -108,11 +160,11 @@ Container generateWidget(var context, String userPkey, Function setState) {
       ),
       CircleAvatar(
         radius: 50,
-        backgroundImage: getProfilePic(context, userPkey, setState).image,
+        backgroundImage: profilePic.image,
       ),
       Text(
-        getUserName(userPkey, setState),
-        style: TextStyle(fontSize: 20),
+        username,
+        style: TextStyle(fontSize: 20, color: hexStringToColor("#2C3333")),
       ),
       SizedBox(
         width: 10,
@@ -121,15 +173,14 @@ Container generateWidget(var context, String userPkey, Function setState) {
   );
 }
 
-Image getProfilePic(var context, String userPkey, Function setState) {
+Future<Image> getProfilePic(var context, String userPkey) async {
   String url = "";
-  FirebaseFirestore.instance
+  await FirebaseFirestore.instance
       .collection('users')
       .doc(userPkey)
       .get()
       .then((value) {
     url = value['profilePic'];
-    setState;
   });
   return url != ""
       ? imgLinkWidget(url, MediaQuery.of(context).size.width,
@@ -138,15 +189,14 @@ Image getProfilePic(var context, String userPkey, Function setState) {
           MediaQuery.of(context).size.width, MediaQuery.of(context).size.width);
 }
 
-String getUserName(String userPkey, Function setState) {
+Future<String> getUserName(String userPkey) async {
   String userName = "";
-  FirebaseFirestore.instance
+  await FirebaseFirestore.instance
       .collection('users')
       .doc(userPkey)
       .get()
       .then((value) {
     userName = value['name'];
-    setState;
   });
   return userName;
 }
