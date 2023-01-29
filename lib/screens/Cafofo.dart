@@ -127,7 +127,21 @@ class _CafofoState extends State<Cafofo> {
                   icon: Icon(Icons.people,
                       color: hexStringToColor("#395B64"), size: 100),
                 ),
-              )
+              ),
+              Container(
+                  height: MediaQuery.of(context).size.height / 8,
+                  width: MediaQuery.of(context).size.width / 2,
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/Residents");
+                      },
+                      child: Text(
+                        "Sair do cafofo",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            decoration: TextDecoration.underline),
+                      )))
             ],
           )));
     } else {
