@@ -39,9 +39,9 @@ class _NotificationsState extends State<Notifications> {
 
   @override
   Widget build(BuildContext context) {
-      get();
-      setState(() {});
-      if (this.cafofoPkey != '') {
+    get();
+    setState(() {});
+    if (this.cafofoPkey != '') {
       return Scaffold(
           appBar: PreferredSize(
               preferredSize: AppBar().preferredSize,
@@ -105,15 +105,15 @@ class _NotificationsState extends State<Notifications> {
   }
 }
 
-ListView getWidgets(var context, var itens) {
+ListView getWidgets(var context, var items) {
   final children = <Widget>[];
-  if (itens != null) {
-    for (int i = itens.length - 1; i > -1; i--) {
-      if (itens[i] == '') continue;
+  if (items != null) {
+    for (int i = items.length - 1; i > -1; i--) {
+      if (items[i] == '') continue;
       children.add(SizedBox(
         height: MediaQuery.of(context).size.height * 0.01,
       ));
-      children.add(generateWidget(context, itens[i]));
+      children.add(generateWidget(context, items[i]));
     }
   }
   return new ListView(

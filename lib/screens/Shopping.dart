@@ -32,20 +32,22 @@ class _ShoppingState extends State<Shopping> {
           .then((data) {
         this.cafofoPkey = value['cafofo'];
         this._items = matrixFromMap(data['shopping']);
+        setState(() {});
       });
     });
     setState(() {});
   }
 
-  void _addItem(String str, qtd) {
+  void _addItem(String str, qtd) async {
     List<String> temp = [str, qtd];
     _items.insert(0, temp);
     FirebaseFirestore.instance
         .collection('cafofos')
         .doc(cafofoPkey)
-        .update({'shopping': mapFromMatrix(_items)});
-    setState(() {});
-    _addNotification(str);
+        .update({'shopping': mapFromMatrix(_items)}).then((value) {
+      _addNotification(str);
+    });
+    get();
   }
 
   void _addNotification(String title) async {
@@ -100,6 +102,8 @@ class _ShoppingState extends State<Shopping> {
                 onPressed: () {
                   _addItem(_controller.text, _qtdcontroller.text);
                   Navigator.pop(context);
+                  _controller.clear();
+                  _qtdcontroller.clear();
                 },
                 child: const Text('Adicionar',
                     style: TextStyle(color: Colors.black)),
@@ -107,15 +111,6 @@ class _ShoppingState extends State<Shopping> {
             ],
           );
         }));
-  }
-
-  void _removeItem(int index) {
-    _items.removeAt(index);
-    FirebaseFirestore.instance
-        .collection('cafofos')
-        .doc(cafofoPkey)
-        .update({'shopping': _items});
-    setState(() {});
   }
 
   @override
@@ -158,12 +153,11 @@ ListView buildList(var items, var context) {
   children.add(SizedBox(
     height: MediaQuery.of(context).size.height * 0.01,
   ));
-  children.add(buildRow(['Qtd', 'Nome'], context));
   for (int i = 0; i < items.length; i++) {
     children.add(SizedBox(
       height: MediaQuery.of(context).size.height * 0.01,
     ));
-    children.add(buildRow(items[i], context));
+    children.add(buildRow(items[i], context, items, i));
   }
   return new ListView(
     padding: EdgeInsets.fromLTRB(
@@ -175,7 +169,7 @@ ListView buildList(var items, var context) {
   );
 }
 
-Row buildRow(var item, var context) {
+Row buildRow(var item, var context, var items, int index) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: <Widget>[
@@ -202,7 +196,25 @@ Row buildRow(var item, var context) {
                   style: TextStyle(
                       fontSize: MediaQuery.of(context).size.height * 0.02,
                       color: hexStringToColor("#252B2B")),
-                  textAlign: TextAlign.center)))
+                  textAlign: TextAlign.center))),
+      IconButton(
+        icon: Icon(Icons.delete),
+        color: Colors.redAccent,
+        padding: EdgeInsets.all(0),
+        onPressed: () {
+          items.removeAt(index);
+          FirebaseFirestore.instance
+              .collection('users')
+              .doc(FirebaseAuth.instance.currentUser!.email)
+              .get()
+              .then((value) {
+            FirebaseFirestore.instance
+                .collection('cafofos')
+                .doc(value['cafofo'])
+                .update({'shopping': mapFromMatrix(items)});
+          });
+        },
+      )
     ],
   );
 }
@@ -210,10 +222,10 @@ Row buildRow(var item, var context) {
 Map<String, dynamic> mapFromMatrix(List<List<String>> matrix) {
   Map<String, Map<String, dynamic>> map = {};
   int index = 0;
-  for (List<String> row in matrix) {
+  for (int i = 0; i < matrix.length; i++) {
     map.addEntries([MapEntry(index.toString(), {})]);
-    for (String value in row) {
-      map[index.toString()]?.addEntries([MapEntry(value, true)]);
+    for (int j = 0; j < matrix[i].length; j++) {
+      map[index.toString()]?.addEntries([MapEntry(matrix[i][j], true)]);
     }
     index += 1;
   }
