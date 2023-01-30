@@ -20,33 +20,55 @@ class _TasksState extends State<Tasks> {
   bool once = true;
 
   get() async {
-    await FirebaseFirestore.instance.collection('users').doc(user!.email).get().then((value) async {
-      await FirebaseFirestore.instance.collection('cafofos').doc(value['cafofo']).get().then((data){
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user!.email)
+        .get()
+        .then((value) async {
+      await FirebaseFirestore.instance
+          .collection('cafofos')
+          .doc(value['cafofo'])
+          .get()
+          .then((data) {
         this.cafofoPkey = (value['cafofo']);
         this._items = (data['tasks']);
       });
     });
   }
 
-  retrieve() async{
+  retrieve() async {
     await get();
-    for(int i = 0; i < this._items.length; i++){
+    for (int i = 0; i < this._items.length; i++) {
       _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
     }
   }
+
   void _addItem(String title) {
     _items.insert(0, title);
     _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
-    FirebaseFirestore.instance.collection('cafofos').doc(cafofoPkey).update({'tasks':_items});
+    FirebaseFirestore.instance
+        .collection('cafofos')
+        .doc(cafofoPkey)
+        .update({'tasks': _items});
     _addNotification(title);
   }
-  
-  void _addNotification(String title) async{
+
+  void _addNotification(String title) async {
     String userName = '';
-    await FirebaseFirestore.instance.collection('users').doc(user!.email).get().then((value) {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user!.email)
+        .get()
+        .then((value) {
       userName = value['name'];
     });
-    await FirebaseFirestore.instance.collection('cafofos').doc(cafofoPkey).update({'notifications': FieldValue.arrayUnion(['Nova tarefa: ${title}, adicionada por: ${userName}'])});
+    await FirebaseFirestore.instance
+        .collection('cafofos')
+        .doc(cafofoPkey)
+        .update({
+      'notifications': FieldValue.arrayUnion(
+          ['Nova tarefa: ${title}, adicionada por: ${userName}'])
+    });
   }
 
   Future<void> addDialog(BuildContext context) {
@@ -56,7 +78,7 @@ class _TasksState extends State<Tasks> {
           return AlertDialog(
             backgroundColor: hexStringToColor("#E7F6F2"),
             title: const Text(
-              'Adicione um item à lista:',
+              'Adicione um item a lista:',
             ),
             content: TextField(
               cursorColor: hexStringToColor("#2C3333"),
@@ -89,13 +111,15 @@ class _TasksState extends State<Tasks> {
     }, duration: const Duration(seconds: 1));
 
     _items.removeAt(index);
-    FirebaseFirestore.instance.collection('cafofos').doc(cafofoPkey).update({'tasks':_items});
+    FirebaseFirestore.instance
+        .collection('cafofos')
+        .doc(cafofoPkey)
+        .update({'tasks': _items});
   }
 
   @override
   Widget build(BuildContext context) {
-
-    if(once) {
+    if (once) {
       retrieve();
       once = false;
     }
@@ -128,7 +152,11 @@ class _TasksState extends State<Tasks> {
                 borderRadius: BorderRadius.circular(25),
                 color: hexStringToColor("#E7F6F2")),
             child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.05, MediaQuery.of(context).size.width*0.01, MediaQuery.of(context).size.width*0.05, MediaQuery.of(context).size.width*0.01),
+              contentPadding: EdgeInsets.fromLTRB(
+                  MediaQuery.of(context).size.width * 0.05,
+                  MediaQuery.of(context).size.width * 0.01,
+                  MediaQuery.of(context).size.width * 0.05,
+                  MediaQuery.of(context).size.width * 0.01),
               title: Text(
                 _items[index],
                 style: TextStyle(fontSize: 18, color: Colors.black),

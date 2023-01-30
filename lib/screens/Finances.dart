@@ -46,7 +46,7 @@ class _FinancesState extends State<Finances> {
             return AlertDialog(
               backgroundColor: hexStringToColor("#E7F6F2"),
               title: const Text(
-                'Adicione um item à lista:',
+                'Adicione um item a lista:',
               ),
               content: TextField(
                 cursorColor: hexStringToColor("#2C3333"),

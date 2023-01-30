@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors_util.dart';
@@ -12,115 +11,61 @@ class Shopping extends StatefulWidget {
 }
 
 class _ShoppingState extends State<Shopping> {
-  var user = FirebaseAuth.instance.currentUser;
-  List<List<String>> _items = [];
-  String cafofoPkey = '';
-  bool once = true;
-  final TextEditingController _controller = TextEditingController();
-  final TextEditingController _qtdcontroller = TextEditingController();
+  final _items = [];
+  final GlobalKey<AnimatedListState> _key = GlobalKey();
+  @override
+  Widget build(BuildContext context) {
+    final bool textcenter = true;
+    final GlobalKey<AnimatedListState> _key = GlobalKey();
+    final TextEditingController _controller = TextEditingController();
 
-  get() async {
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(user!.email)
-        .get()
-        .then((value) async {
-      await FirebaseFirestore.instance
-          .collection('cafofos')
-          .doc(value['cafofo'])
-          .get()
-          .then((data) {
-        this.cafofoPkey = value['cafofo'];
-        this._items = matrixFromMap(data['shopping']);
-      });
-    });
-    setState(() {});
-  }
+    void _addItem(String title) {
+      _items.insert(0, title);
+      _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
+    }
 
-  void _addItem(String str, qtd) {
-    List<String> temp = [str, qtd];
-    _items.insert(0, temp);
-    FirebaseFirestore.instance
-        .collection('cafofos')
-        .doc(cafofoPkey)
-        .update({'shopping': mapFromMatrix(_items)});
-    setState(() {});
-    _addNotification(str);
-  }
-
-  void _addNotification(String title) async {
-    String userName = '';
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(user!.email)
-        .get()
-        .then((value) {
-      userName = value['name'];
-    });
-    await FirebaseFirestore.instance
-        .collection('cafofos')
-        .doc(cafofoPkey)
-        .update({
-      'notifications': FieldValue.arrayUnion([
-        'Novo item no carrinho de compras: ${title}, adicionado por: ${userName}'
-      ])
-    });
-  }
-
-  Future<void> addDialog(BuildContext context) {
-    return showDialog(
-        context: context,
-        builder: ((context) {
-          return AlertDialog(
-            backgroundColor: hexStringToColor("#E7F6F2"),
-            title: const Text(
-              'Adicione um item a lista:',
-            ),
-            content: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-              TextField(
+    Future<void> addDialog(BuildContext context) {
+      return showDialog(
+          context: context,
+          builder: ((context) {
+            return AlertDialog(
+              backgroundColor: hexStringToColor("#E7F6F2"),
+              title: const Text(
+                'Adicione um item a lista:',
+              ),
+              content: TextField(
                 cursorColor: hexStringToColor("#2C3333"),
                 controller: _controller,
                 decoration: const InputDecoration(
                   hintText: '',
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-              Text(" Quantidade: "),
-              TextField(
-                keyboardType: TextInputType.numberWithOptions(decimal: true),
-                cursorColor: hexStringToColor("#2C3333"),
-                controller: _qtdcontroller,
-                decoration: const InputDecoration(
-                  hintText: '',
-                ),
-              )
-            ]),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  _addItem(_controller.text, _qtdcontroller.text);
-                  Navigator.pop(context);
-                },
-                child: const Text('Adicionar',
-                    style: TextStyle(color: Colors.black)),
-              )
-            ],
-          );
-        }));
-  }
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    _addItem(_controller.text);
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Adicionar',
+                      style: TextStyle(color: Colors.black)),
+                )
+              ],
+            );
+          }));
+    }
 
-  void _removeItem(int index) {
-    _items.removeAt(index);
-    FirebaseFirestore.instance
-        .collection('cafofos')
-        .doc(cafofoPkey)
-        .update({'shopping': _items});
-    setState(() {});
-  }
+    void _removeItem(int index) {
+      _key.currentState!.removeItem(index, (_, animation) {
+        return Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
+            child: SizeTransition(
+              sizeFactor: animation,
+            ));
+      }, duration: const Duration(seconds: 1));
 
-  @override
-  Widget build(BuildContext context) {
-    get();
+      _items.removeAt(index);
+    }
+
     return Scaffold(
       backgroundColor: hexStringToColor("#A5c9CA"),
       appBar: PreferredSize(
@@ -131,7 +76,7 @@ class _ShoppingState extends State<Shopping> {
                 iconTheme: IconThemeData(color: hexStringToColor("#2C3333")),
                 title: Text("Compras",
                     style: TextStyle(color: hexStringToColor("#2C3333"))),
-                centerTitle: true,
+                centerTitle: textcenter,
                 backgroundColor: hexStringToColor("#E7F6F2"),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -140,7 +85,31 @@ class _ShoppingState extends State<Shopping> {
           ),
         ),
       ),
-      body: Center(child: buildList(_items, context)),
+      body: AnimatedList(
+        key: _key,
+        itemBuilder: (context, index, animation) {
+          return Container(
+            alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                color: hexStringToColor("#E7F6F2")),
+            child: ListTile(
+              contentPadding: const EdgeInsets.all(15),
+              title: Text(
+                _items[index],
+                style: TextStyle(fontSize: 24, color: Colors.black),
+              ),
+              trailing: IconButton(
+                icon: Icon(Icons.delete),
+                color: Colors.redAccent,
+                onPressed: () {
+                  _removeItem(index);
+                },
+              ),
+            ),
+          );
+        },
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: hexStringToColor("#395B64"),
         onPressed: () {
@@ -151,85 +120,4 @@ class _ShoppingState extends State<Shopping> {
       ),
     );
   }
-}
-
-ListView buildList(var items, var context) {
-  final children = <Widget>[];
-  children.add(SizedBox(
-    height: MediaQuery.of(context).size.height * 0.01,
-  ));
-  children.add(buildRow(['Qtd', 'Nome'], context));
-  for (int i = 0; i < items.length; i++) {
-    children.add(SizedBox(
-      height: MediaQuery.of(context).size.height * 0.01,
-    ));
-    children.add(buildRow(items[i], context));
-  }
-  return new ListView(
-    padding: EdgeInsets.fromLTRB(
-        MediaQuery.of(context).size.width * (0.05),
-        MediaQuery.of(context).size.width * 0.01,
-        MediaQuery.of(context).size.width * (0.05),
-        MediaQuery.of(context).size.width * 0.01),
-    children: children,
-  );
-}
-
-Row buildRow(var item, var context) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: <Widget>[
-      Container(
-          height: MediaQuery.of(context).size.height * 0.05,
-          width: MediaQuery.of(context).size.width * 0.65,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: hexStringToColor('#E7F6F2')),
-          child: Center(
-              child: Text(item[1],
-                  style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height * 0.02,
-                      color: hexStringToColor("#252B2B")),
-                  textAlign: TextAlign.center))),
-      Container(
-          height: MediaQuery.of(context).size.height * 0.05,
-          width: MediaQuery.of(context).size.width * 0.10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: hexStringToColor('#E7F6F2')),
-          child: Center(
-              child: Text(item[0],
-                  style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height * 0.02,
-                      color: hexStringToColor("#252B2B")),
-                  textAlign: TextAlign.center)))
-    ],
-  );
-}
-
-Map<String, dynamic> mapFromMatrix(List<List<String>> matrix) {
-  Map<String, Map<String, dynamic>> map = {};
-  int index = 0;
-  for (List<String> row in matrix) {
-    map.addEntries([MapEntry(index.toString(), {})]);
-    for (String value in row) {
-      map[index.toString()]?.addEntries([MapEntry(value, true)]);
-    }
-    index += 1;
-  }
-  return map;
-}
-
-List<List<String>> matrixFromMap(Map<dynamic, dynamic> dynamicMap) {
-  final map = Map<String, dynamic>.from(dynamicMap);
-  List<List<String>> matrix = [];
-  map.forEach((stringIndex, value) {
-    Map<String, dynamic> rowMap = Map<String, dynamic>.from(value);
-    List<String> row = [];
-    rowMap.forEach((string, boolean) {
-      row.add(string);
-    });
-    matrix.add(row);
-  });
-  return matrix;
 }
