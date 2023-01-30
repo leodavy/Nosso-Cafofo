@@ -15,9 +15,8 @@ class _TasksState extends State<Tasks> {
   var user = FirebaseAuth.instance.currentUser;
   final GlobalKey<AnimatedListState> _key = GlobalKey();
   final TextEditingController _controller = TextEditingController();
-  var _items = [];
+  var items = [];
   String cafofoPkey = '';
-  bool once = true;
 
   get() async {
     await FirebaseFirestore.instance
@@ -31,25 +30,25 @@ class _TasksState extends State<Tasks> {
           .get()
           .then((data) {
         this.cafofoPkey = (value['cafofo']);
-        this._items = (data['tasks']);
+        this.items = (data['tasks']);
       });
     });
   }
 
   retrieve() async {
     await get();
-    for (int i = 0; i < this._items.length; i++) {
+    for (int i = 0; i < this.items.length; i++) {
       _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
     }
   }
 
   void _addItem(String title) {
-    _items.insert(0, title);
+    items.insert(0, title);
     _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
     FirebaseFirestore.instance
         .collection('cafofos')
         .doc(cafofoPkey)
-        .update({'tasks': _items});
+        .update({'tasks': items});
     _addNotification(title);
   }
 
@@ -110,18 +109,17 @@ class _TasksState extends State<Tasks> {
           ));
     }, duration: const Duration(seconds: 1));
 
-    _items.removeAt(index);
+    items.removeAt(index);
     FirebaseFirestore.instance
         .collection('cafofos')
         .doc(cafofoPkey)
-        .update({'tasks': _items});
+        .update({'tasks': items});
   }
 
   @override
   Widget build(BuildContext context) {
-    if (once) {
+    if (this.cafofoPkey == '') {
       retrieve();
-      once = false;
     }
     return Scaffold(
       backgroundColor: hexStringToColor("#A5c9CA"),
@@ -146,19 +144,23 @@ class _TasksState extends State<Tasks> {
         key: _key,
         itemBuilder: (context, index, animation) {
           return Container(
-            margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
+            margin: EdgeInsets.fromLTRB(
+                MediaQuery.of(context).size.width * 0.01,
+                MediaQuery.of(context).size.height * 0.01 / 2,
+                MediaQuery.of(context).size.width * 0.01,
+                MediaQuery.of(context).size.height * 0.01 / 2),
             alignment: Alignment.topCenter,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 color: hexStringToColor("#E7F6F2")),
             child: ListTile(
               contentPadding: EdgeInsets.fromLTRB(
-                  MediaQuery.of(context).size.width * 0.05,
-                  MediaQuery.of(context).size.width * 0.01,
-                  MediaQuery.of(context).size.width * 0.05,
-                  MediaQuery.of(context).size.width * 0.01),
+                  MediaQuery.of(context).size.width * 0.04,
+                  MediaQuery.of(context).size.height * 0.01 / 2,
+                  MediaQuery.of(context).size.width * 0.03,
+                  MediaQuery.of(context).size.height * 0.01 / 2),
               title: Text(
-                _items[index],
+                items[index],
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
               trailing: IconButton(

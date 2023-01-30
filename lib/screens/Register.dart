@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/utils/colors_util.dart';
-import '../utils/widgets_util.dart';
+
 import '../utils/UserManagement.dart';
+import '../utils/widgets_util.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -72,14 +72,13 @@ class _RegisterState extends State<Register> {
                         email: _emailTextController.text,
                         password: _passwordTextController.text)
                     .then((value) {
-                  print("Created new acount");
                   UserManagement().storeNewUser(
                       value.user, _nameTextController.text, null, context);
                 }).onError((error, stackTrace) {
-                  if(error.toString() == '[firebase_auth/weak-password] Password should be at least 6 characters'){
+                  if (error.toString() ==
+                      '[firebase_auth/weak-password] Password should be at least 6 characters') {
                     _incorrectPassword = invalidPassword();
-                    setState(() {
-                    });
+                    setState(() {});
                   }
                   print("Error ${error.toString()}");
                 });
@@ -101,7 +100,7 @@ class _RegisterState extends State<Register> {
     );
   }
 
-  Text invalidPassword(){
+  Text invalidPassword() {
     return Text(
       "Senha deve possuir no mínimo, 6 caracteres",
       style: TextStyle(color: hexStringToColor("#2c3333")),

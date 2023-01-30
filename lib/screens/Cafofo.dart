@@ -206,8 +206,8 @@ class _CafofoState extends State<Cafofo> {
                               .doc(cafofoPkey)
                               .set(<String, dynamic>{
                             'members': [user!.email],
-                            'finances': Map<dynamic, dynamic>,
-                            'shopping': Map<dynamic, dynamic>,
+                            'finances': [],
+                            'shopping': [],
                             'tasks': [],
                             'notifications': []
                           });
