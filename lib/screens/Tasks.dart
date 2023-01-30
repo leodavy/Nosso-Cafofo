@@ -37,7 +37,7 @@ class _TasksState extends State<Tasks> {
   void _addItem(String title) {
     _items.insert(0, title);
     _key.currentState!.insertItem(0, duration: const Duration(seconds: 1));
-    FirebaseFirestore.instance.collection('cafofos').doc(cafofoPkey).update({'tasks':FieldValue.arrayUnion([title])});
+    FirebaseFirestore.instance.collection('cafofos').doc(cafofoPkey).update({'tasks':_items});
     _addNotification(title);
   }
   

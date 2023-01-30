@@ -1,8 +1,10 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nosso_cafofo/utils/UserManagement.dart';
-import 'dart:math';
+
 import '../utils/colors_util.dart';
 import '../utils/widgets_util.dart';
 
@@ -131,13 +133,21 @@ class _CafofoState extends State<Cafofo> {
               Container(
                   height: MediaQuery.of(context).size.height * 0.05,
                   width: MediaQuery.of(context).size.width * 0.50,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)
-                      ,color: hexStringToColor('#E7F6F2')),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: hexStringToColor('#E7F6F2')),
                   child: TextButton(
-                      onPressed: () async{
-                        var userDoc = await FirebaseFirestore.instance.collection('users').doc(user!.email);
+                      onPressed: () async {
+                        var userDoc = await FirebaseFirestore.instance
+                            .collection('users')
+                            .doc(user!.email);
                         await userDoc.get().then((value) async {
-                          await FirebaseFirestore.instance.collection('cafofos').doc(value['cafofo']).update({'members' : FieldValue.arrayRemove([user!.email])});
+                          await FirebaseFirestore.instance
+                              .collection('cafofos')
+                              .doc(value['cafofo'])
+                              .update({
+                            'members': FieldValue.arrayRemove([user!.email])
+                          });
                         });
                         await userDoc.update({'cafofo': ''});
                         get();
@@ -145,9 +155,7 @@ class _CafofoState extends State<Cafofo> {
                       },
                       child: Text(
                         "Sair do cafofo",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black),
+                        style: TextStyle(fontSize: 20, color: Colors.black),
                       )))
             ],
           )));
@@ -198,8 +206,8 @@ class _CafofoState extends State<Cafofo> {
                               .doc(cafofoPkey)
                               .set(<String, dynamic>{
                             'members': [user!.email],
-                            'finances': [],
-                            'shopping': [],
+                            'finances': Map<dynamic, dynamic>,
+                            'shopping': Map<dynamic, dynamic>,
                             'tasks': [],
                             'notifications': []
                           });
@@ -262,7 +270,9 @@ class _CafofoState extends State<Cafofo> {
                               .collection('cafofos')
                               .doc(_cafofoTextController.text);
                           if ((await cafofo.get()).exists) {
-                            cafofo.update({'members': FieldValue.arrayUnion([user!.email])});
+                            cafofo.update({
+                              'members': FieldValue.arrayUnion([user!.email])
+                            });
                             UserManagement()
                                 .set('cafofo', _cafofoTextController.text);
                             get();
